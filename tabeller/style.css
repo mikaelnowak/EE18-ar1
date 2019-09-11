@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Modak&display=swap');
+body {
+
+}
+table {
+    width: 1585px;
+    background: #eee;
+    border-spacing: 30px;
+    table-layout: fixed
+}
+caption {
+    font-family: 'Modak', cursive;
+    font-size: 50px;
+    background-image: url("./bilder/caption-mat.jpg");
+    background-size: cover;
+    border-radius: 50px;
+}
+tr {
+
+}
+th {
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    padding: 25px;
+    border-radius: 100px;
+}
+td {
+    font-family: 'Fredoka One', cursive;
+    font-size: 15px;
+    background: #fff;
+    padding: 25px;
+    border: 1px solid #fa0;
+    border-radius: 150px;
+}
+img {
+    width: 100%;
+    border-radius: 150px;
+}
