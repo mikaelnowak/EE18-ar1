@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Modak&display=swap');
-body {
-
-}
 table {
     width: 1585px;
     background: #eee;
@@ -15,15 +12,12 @@ caption {
     background-size: cover;
     border-radius: 50px;
 }
-tr {
-
-}
 th {
     font-family: 'Fredoka One', cursive;
     font-size: 25px;
-    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(10deg, #f6d365 0%, #ee5f38 100%);
     padding: 25px;
-    border-radius: 100px;
+    border-radius: 25px;
 }
 td {
     font-family: 'Fredoka One', cursive;
@@ -31,9 +25,9 @@ td {
     background: #fff;
     padding: 25px;
     border: 1px solid #fa0;
-    border-radius: 150px;
+    border-radius: 25px;
 }
 img {
     width: 100%;
-    border-radius: 150px;
+    border-radius: 25px;
 }
