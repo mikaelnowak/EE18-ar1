@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Modak&display=swap');
+table {
+    width: 1585px;
+    border-spacing: 10px;
+    table-layout: fixed;
+}
 th {
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 150px;
+    border-collapse: collapse;
+}
+td {
+    font-family: 'Modak', cursive;
+    font-size: 10px;
+}
+img {
+ width: 50px;
 }
