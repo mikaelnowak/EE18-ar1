@@ -1,0 +1,16 @@
+body {
+    background-image: url(./bilder/jorden.jpg);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center top;
+    background-attachment: fixed;
+}
+h1 {
+    color: #fff;
+    font-size: 100px;
+    font-family: sans-serif;
+    margin-left: 175px;
+    margin-top: 50px;
+    width: 500px;
+}

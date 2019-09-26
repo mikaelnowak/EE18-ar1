@@ -1,0 +1,18 @@
+body {
+    background: url(./bilder/photo-1496737018672-b1a6be2e949c.jpg);
+    background-size: cover;
+}
+h1 {
+    font: 80px sans-serif;
+    margin: 100px 0 0 100px;
+    color: #FFF;
+    text-transform: uppercase;
+}
+h2 {
+    font: 40px sans-serif;
+    font-weight: bold;
+    margin: 50px 0 0 100px;
+}
+p {
+
+}

@@ -1,0 +1,20 @@
+body {
+    background: url(./bilder/skane.jpg) no-repeat;
+}
+h1 {
+    color: #fff;
+    font: 40px serif;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+p {
+    color: #fff;
+    font: 17px serif;
+    font-style: italic;
+    margin-left: 100px;
+}
+img {
+    width: 100px;
+    margin-left: 100px;
+}
