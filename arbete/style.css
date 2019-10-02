@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed&display=swap');
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utseende på sida */
+.sida1{
+    background: url(./bilder/pattern1.jpg)
+}
+.sida2 {
+    background: url(./bilder/pattern2.jpg)
+}
+.sida3 {
+    background: url(./bilder/pattern3.jpg)
+}
+
+/* Utseende på boxen */
+div {
+    width: 500px;
+    padding: 50px 25px 50px 25px;
+    margin: 100px auto 0 auto;
+    background: #fff;
+    border-radius: 20px;
+    border: 5px dashed #000
+}
+
+/* Utseende på inehållet */
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px
+}
+p {
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 10px;
+    font-size: 30px;
+    margin: 20px 0 20px 0;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
