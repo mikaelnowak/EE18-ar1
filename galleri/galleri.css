@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Turret+Road&display=swap');
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utseende på sidan */
+body {
+    background: url(./bilder/galleri1.png);
+    background-size: cover;
+}
+.kontainer {
+    width: 700px;
+    margin: 0 auto;
+    background: #ffffff61;
+    padding: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    font-family: 'Turret Road', cursive;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Utseende på rutor */
+.bild {
+    background: #000;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+img {
+    width: 50%;
+    border: 5px solid #fff;
+}
+.bildtext {
+    color: #fff;
+}
+
+/* Utseende på sidofoten */
+.kalla {
+
+}
