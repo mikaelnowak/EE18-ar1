@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Righteous&display=swap');
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+table {
+    background: #fff;
+    width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+caption {
+    background: #12326E;
+    font-family: 'Righteous', cursive;
+    font-size: 25px;
+    padding: 20px;
+    color: #fff;
+    padding-bottom: 50px;
+}
+thead {
+    background: #12326E;
+}
+tbody {
+
+}
+tr {
+    
+}
+th {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 7px;
+    color: #fff;
+}
+td {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center; 
+    padding: 7px;
+}
+img {
+    width: 20px;
+}
+.ledare {
+    background: #E73088;
+    color: #fff
+}
+.varannan {
+
+}
+.vänster {
+    text-align: left;
+}
