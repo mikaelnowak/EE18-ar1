@@ -11,6 +11,15 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 
+/* CSS clearfix mot box-kollaps */
+.clearfix:after { 
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+ }
+
 /* Utseende på sidan */
 body {
     background: url(./bilder/galleri1.png);
@@ -19,7 +28,7 @@ body {
 .kontainer {
     width: 700px;
     margin: 0 auto;
-    background: #ffffff61;
+    background: #ffffff8e;
     padding: 40px;
     font-family: 'Roboto', sans-serif;
 }
@@ -46,6 +55,21 @@ img {
 }
 .bildtext {
     color: #fff;
+}
+.vänster {
+    float: left;
+    margin-right: 15px;
+}
+.höger {
+    float: right;
+    margin-left: 15px;
+}
+.texthöger {
+    text-align: right;
+}
+hr {
+    clear: both;
+    visibility: hidden;
 }
 
 /* Utseende på sidofoten */
