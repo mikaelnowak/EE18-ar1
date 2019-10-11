@@ -27,7 +27,7 @@ body {
 }
 .kontainer {
     width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     background: #ffffff8e;
     padding: 40px;
     font-family: 'Roboto', sans-serif;
