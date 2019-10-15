@@ -15,21 +15,24 @@ body {
     background: #e2f9ff;;
 }
 div {
-    background: #d3d3d3;
+
 }
 
 /* Utseende på länkarna */
 .sökruta {
     width: 200px;
     margin: 100px 0 0 147px;
+    border: 1px solid #AAA;
+    border-radius: 20px;
+    background: #888;
+    background: #d3d3d3;
 }
 .länk {
     padding: 10px;
-    border: 1px solid #000;
     text-align: center;
 }
 a {
-    
+    text-transform: none;
 }
 
 /* Utseende på texten */
@@ -49,10 +52,4 @@ p {
 }
 ul {
     margin-bottom: 20px;
-}
-li {
-    
-}
-ol {
-
 }
