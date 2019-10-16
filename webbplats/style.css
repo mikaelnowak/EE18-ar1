@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab&display=swap');
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidans färgpalett
+$color1: rgba(5, 102, 141, 1);
+$color2: rgba(2, 128, 144, 1);
+$color3: rgba(0, 168, 150, 1);
+$color4: rgba(2, 195, 154, 1);
+$color5: rgba(240, 243, 189, 1); */
+
+/* Sidans utseende */
+body {
+    background: rgb(49, 49, 49);
+}
+.kontainer {
+    font-family: 'Lato', sans-serif;
+    width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background: rgb(159, 159, 159);
+}
+.kontainer h1 {
+    font-family: 100px 'Roboto Slab', serif;
+    text-align: center;
+    color: rgba(2, 195, 154, 1);
+    text-shadow: 5px 5px 5px #000;
+}
+
+/* Menyns utseende */
+.kontainer .meny {
+    text-align: center;
+    margin: 20px 0;
+}
+.kontainer .meny li {
+    list-style-type: none;
+    display: inline;
+}
+.kontainer .meny a {
+    background: rgba(5, 102, 141, 1);
+    padding: 6px;
+    margin: 0 3px;
+    color: rgba(240, 243, 189, 1);
+    text-decoration: none;
+    border-radius: 10px;
+    width: 125px;
+    display: inline-block;
+}
+.kontainer .meny a:hover {
+    background: rgba(240, 243, 189, 1);
+    color: rgba(5, 102, 141, 1);
+}
+.kontainer .meny .aktiv {
+    background: #000;
+    color: #fff;
+}
+
+/* Innehållets utseende */
+.kontainer h2 {
+    text-align: center;
+    color: rgba(0, 168, 150, 1);
+    text-shadow: 5px 5px 5px #000;
+}
+.kontainer figure {
+    background: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 20px auto;
+}
+.kontainer figure img {
+    width: 100%;
+}
+.kontainer figure figcaption {
+
+}
+.kontainer p {
+
+}
+.kontainer .sidfot {
+    color: #494949;
+    font-style: italic;
+}
+.kontainer .sidfot a {
+    color: rgb(255, 0, 255);
+    text-decoration: none;
+}
