@@ -60,10 +60,12 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 .kontainer .rutnät .produkt img {
-
+    width: 100%;
 }
 .kontainer .rutnät .produkt p {
     padding: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .kontainer .ljus {
