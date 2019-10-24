@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Spicy+Rice&display=swap');
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -18,27 +19,47 @@ div {
 
 }
 .kontainer{
-
+    background: #000;
 }
 
 /* Utseende på huvudet */
 .kontainer .top {
-
+    height: 300px;
+    background: #000;
 }
-.kontainer .top p {
-
+.kontainer .top h1 {
+    font-family: 'Spicy Rice', cursive;
+    color: #fff;
+    position: relative;
+    top: -310px;
+    left: 175px;
+    font-size: 60px;
+}
+.kontainer .top img {
+    margin: -60px 0 0 500px;
 }
 
 /* Utseende på sökfältet */
 .kontainer .pumpor {
-
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .kontainer .pumpor .alternativ {
-
+    height: 300px;
+    margin: 10px
 }
 .kontainer .pumpor .alternativ img {
-
+    width: 100%;
+    height: 100%;
 }
 .kontainer .pumpor .alternativ p {
-
+    font-family: 'Fjalla One', sans-serif;
+    width: ;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
 }
