@@ -19,7 +19,8 @@ div {
 
 }
 .kontainer{
-
+    font-family: 'Fjalla One', sans-serif;
+    width: 1515px;
 }
 
 /* Utseende på huvudet */
@@ -31,18 +32,17 @@ div {
     color: #fff;
     margin: 100px 0 0 750px;
     font-size: 60px;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 /* Utseende på  menyn*/
 .meny {
-    width: 337px;
-    margin: -150px 0 40px 300px;
+    margin: -150px 0 40px 950px;
 }
 .meny ul {
-
+    
 }
 .meny ul li {
-    font-family: 'Fjalla One', sans-serif;
     color: #ff0;
     background: linear-gradient(90deg, rgba(255,106,0,1) 0%, rgba(75,25,0,1) 100%);
     display: inline;
@@ -60,21 +60,28 @@ div {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
-.kontainer .pumpor .alternativ {
-    height: 300px;
-    margin: 10px
+.kontainer .pumpor a {
+    text-decoration: none;
 }
-.kontainer .pumpor .alternativ img {
+.kontainer .pumpor a .alternativ {
+    height: 300px;
+    margin: 10px;
+    box-shadow: 0 0 5px #fff;
+}
+.kontainer .pumpor a .alternativ:hover {
+    border-radius: 3px solid #f80;
+}
+.kontainer .pumpor a .alternativ img {
     width: 100%;
     height: 100%;
 }
-.kontainer .pumpor .alternativ p {
-    font-family: 'Fjalla One', sans-serif;
+.kontainer .pumpor a .alternativ p {
     text-align: center;
     position: relative;
     top: -40px;
     left: 0;
-    background: #fff;
+    background: #2b2b2b;
+    color: #854700;
     padding: 10px;
     border-radius: 5px;
 }
