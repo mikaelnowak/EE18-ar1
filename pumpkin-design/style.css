@@ -102,7 +102,6 @@ div {
 }
 
 /* Utseend till sida# */
-
 .sida {
 
 }
@@ -114,22 +113,39 @@ div {
     text-shadow: 1px 1px 2px #fff;
 }
 .sida .innehåll {
-    
-    display: inline;
     padding: 30px;
+    display: inline;
 }
 .sida .innehåll .text {
-    display: inline-block;
+    font-size: 25px;
     width: 1000px;
-    padding-right: 20px;
+    float: left;
+    margin: 40px;
 }
 .sida .innehåll .text p {
     
 }
 .sida .innehåll .bild {
-    display: inline-block;
     width: 400px;
+    display: inline-block;
 }
 .sida .innehåll .bild img {
     width: 100%;
+}
+
+/* Utseende på tillbaka knappen */
+.tillbaks {
+    margin-bottom: 20px;
+}
+.tillbaks p {
+    font-size: 20px;
+    margin-left: 40px;
+}
+.tillbaks p a {
+    background: linear-gradient(90deg, rgba(255,106,0,1) 0%, rgba(75,25,0,1) 100%);
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #f60;
+    text-decoration: none;
+    color: #ff0;
 }
