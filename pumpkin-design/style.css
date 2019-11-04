@@ -14,13 +14,15 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 /* Utseende på backgrunden */
 body {  
     background: #030200 url(./bilder/ensam_pump.png) no-repeat;
+    color: #fff
 }
 div {
 
 }
-.kontainer{
+.kontainer {
     font-family: 'Fjalla One', sans-serif;
     width: 1515px;
+    color: #854700;
 }
 
 /* Utseende på huvudet */
@@ -29,13 +31,12 @@ div {
 }
 .kontainer .sidhuvud h1 {
     font-family: 'Spicy Rice', cursive;
-    color: #fff;
     margin: 100px 0 0 750px;
     font-size: 60px;
     text-shadow: 1px 1px 2px #fff;
 }
 
-/* Utseende på  menyn*/
+/* Utseende på menyn*/
 .meny {
     margin: -150px 0 40px 950px;
 }
@@ -51,11 +52,11 @@ div {
     border: 3px solid #f60;
     font-size: 30px;
 }
-.meny ul li a{
+.meny ul li a {
     text-decoration: none;
     color: #ff0;
 }
-.meny ul li a:hover{
+.meny ul li a:hover {
     color: #000;
 }
 
@@ -66,15 +67,13 @@ div {
 }
 .kontainer .pumpor a {
     text-decoration: none;
+    color: #854700;
 }
 .kontainer .pumpor a .alternativ {
     height: 300px;
     margin: 10px;
     box-shadow: 0 0 5px #fff;
     display: block;
-}
-.kontainer .pumpor a .alternativ:hover {
-    border-radius: 3px solid #f80;
 }
 .kontainer .pumpor a .alternativ img {
     width: 100%;
@@ -86,7 +85,51 @@ div {
     top: -40px;
     left: 0;
     background: #2b2b2b;
-    color: #854700;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Sidfotens utseende */
+.sidfot {
+    color: #fff;
+}
+.sidfot p {
+    font-size: 12px;
+}
+.sidfot p a {
+    color: #ff0;
+    text-decoration: none;
+}
+
+/* Utseend till sida# */
+
+.sida {
+
+}
+.sida .huvud {
+    font-family: 'Spicy Rice', cursive;
+    color: #854700;
+    margin: 110px 0 110px 750px;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #fff;
+}
+.sida .innehåll {
+    
+    display: inline;
+    padding: 30px;
+}
+.sida .innehåll .text {
+    display: inline-block;
+    width: 1000px;
+    padding-right: 20px;
+}
+.sida .innehåll .text p {
+    
+}
+.sida .innehåll .bild {
+    display: inline-block;
+    width: 400px;
+}
+.sida .innehåll .bild img {
+    width: 100%;
 }
