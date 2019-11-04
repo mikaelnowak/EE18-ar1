@@ -43,7 +43,6 @@ div {
     
 }
 .meny ul li {
-    color: #ff0;
     background: linear-gradient(90deg, rgba(255,106,0,1) 0%, rgba(75,25,0,1) 100%);
     display: inline;
     margin-right: 10px;
@@ -52,9 +51,14 @@ div {
     border: 3px solid #f60;
     font-size: 30px;
 }
-.meny ul li:hover {
+.meny ul li a{
+    text-decoration: none;
+    color: #ff0;
+}
+.meny ul li a:hover{
     color: #000;
 }
+
 /* Utseende på sökfältet */
 .kontainer .pumpor {
     display: grid;
@@ -67,6 +71,7 @@ div {
     height: 300px;
     margin: 10px;
     box-shadow: 0 0 5px #fff;
+    display: block;
 }
 .kontainer .pumpor a .alternativ:hover {
     border-radius: 3px solid #f80;
