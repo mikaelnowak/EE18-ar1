@@ -16,9 +16,6 @@ body {
     background: #030200 url(./bilder/ensam_pump.png) no-repeat;
     color: #fff
 }
-div {
-
-}
 .kontainer {
     font-family: 'Fjalla One', sans-serif;
     width: 1515px;
@@ -39,9 +36,6 @@ div {
 /* Utseende på menyn*/
 .meny {
     margin: -150px 0 40px 950px;
-}
-.meny ul {
-    
 }
 .meny ul li {
     background: linear-gradient(90deg, rgba(255,106,0,1) 0%, rgba(75,25,0,1) 100%);
@@ -123,9 +117,6 @@ div {
     width: 1000px;
     float: left;
     margin: 40px;
-}
-.sida .innehåll .text p {
-    
 }
 .sida .innehåll .bild {
     width: 400px;
