@@ -69,6 +69,9 @@ div {
     text-decoration: none;
     color: #854700;
 }
+.kontainer .pumpor a:hover {
+    border: 5px solid #f60;
+}
 .kontainer .pumpor a .alternativ {
     height: 300px;
     margin: 10px;
