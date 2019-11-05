@@ -106,7 +106,7 @@ div {
 
 /* Utseend till sida# */
 .sida {
-
+    font-family: 'Fjalla One', sans-serif;
 }
 .sida .huvud {
     font-family: 'Spicy Rice', cursive;
@@ -116,7 +116,6 @@ div {
     text-shadow: 1px 1px 2px #fff;
 }
 .sida .innehåll {
-    padding: 30px;
     display: inline;
 }
 .sida .innehåll .text {
