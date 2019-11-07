@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontaktformulär</title>
+    <link rel="stylesheet" href="./kontakt.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>HEJHEJ</h1>
+        <form action="kontakt.php" method="post">
+            <label for="fnamn">Förnamn</label>
+            <input id="fnamn" type="text" name="fnamn" placeholder="T.ex Gunnar">
+            <label for="enamn">Efternamn</label>
+            <input id="enamn" type="text" name="enamn" placeholder="T.ex Gunnarsson">
+            <label for="gadress">Gatuadress</label>
+            <input id="gadress" type="text" name="gadress" placeholder="T.ex Gunnarsvägen 69">
+            <label for="pnum">Postnummer</label>
+            <input id="pnum" type="text" name="pnum" placeholder="T.ex 69 420">
+            <label for="pad">Postadress</label>
+            <input id="pad" type="text" name="pad" placeholder="T.ex Stockholm">
+            <label for="epost">Epost</label>
+            <input id="epost" type="email" name="epost" placeholder="T.ex Hej@hej.hej" required>
+            <label for="mobil">Mobil</label>
+            <input id="mobil" type="email" name="email" placeholder="T.ex 07012345678" required pattern="07[0-9]{8}">
+            <label>Kön</label>
+            <div class="kon">
+                <label for="man"><input type="radio" id="man" name="kon" required checked> Man</label>
+                <label for="kvinna"><input type="radio" id="kvinna" name="kon" required> Kvinna</label>
+                <label for="annat"><input type="radio" id="annat" name="kon" required> Annat</label>
+            </div>
+            <label>Allergi</label>
+            <div class="kon">
+                <label for="gluten"><input type="checkbox" id="gluten" name="allergi" checked> gluten</label>
+                <label for="laktos"><input type="checkbox" id="laktos" name="allergi"> laktos</label>
+                <label for="nötter"><input type="checkbox" id="nötter" name="allergi"> nötter</label>
+            </div>
+            <label for="hk">Hemkommun</label>
+            <select id="hk">
+                <option value="Stockholm">Stockholm</option>
+                <option value="Sundbyberg">Sundbyberg</option>
+                <option value="Värmdö" selected>Värmdö</option>
+                <option value="Nacka">Nacka</option>
+                <option value="Huddinge">Huddinge</option>
+            </select>
+            <label for="kommentar">Kommentar</label>
+            <textarea id="kommentar">Skriv text här...</textarea>
+            <button>Klicka</button>
+        </form>
+    </div>
+</body>
+</html>
