@@ -27,15 +27,15 @@ body {
 }
 input, select, textarea {
     padding: 5px;
-    background: rgb(238, 155, 230);
+    background: #eee;
     border: none;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 3px;
 }
 button {
     padding: 10px;
-    background: blue;
-    border: 2px solid lightblue;
+    background: #b81c1c;
+    border: 2px solid #882222;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
