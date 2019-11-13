@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduktion till JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Introduktion till JavaScript</h1>
+    </div>
+    <script>
+    /* Slumpa fram ett tal */
+    var slumptal = Math.ceil(Math.random() * 10);
+    console.log("slumptal = " + slumptal);
+    
+
+    /* Läs av gissning */
+    var gissning = prompt("Gissa ett tal från 1 till 10");
+
+    /* Är gissningen = slumptalet? */
+    if (gissning == slumptal) {
+        /* Fuskare */
+        location.replace("/allsvenskan/tabell.html");
+    } else {
+        /* Noob */
+        location.replace("/berger-king/meny.html")
+    }
+
+    </script>
+</body>
+</html>
