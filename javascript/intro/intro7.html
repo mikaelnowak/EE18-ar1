@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduktion till JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Introduktion till JavaScript</h1>
+    </div>
+    <script>
+        /* Slumpa fram 2 tal 1-10 */
+        var tal1 = Math.ceil(Math.random() * 10)
+        var tal2 = Math.ceil(Math.random() * 10)
+
+        /* tal1 + tal2 */
+        var summa = tal1 + tal2;
+
+        /* Läs in gissning */
+        var gissning = prompt("Vad är " + tal1 + " + " + tal2)
+
+        /* Är ekvationen = svaret */
+        if (gissning !== summa) {
+            /* Rätt */
+            alert("Du klara 1:an din dumma fan!!!!")
+        } else {
+            /* Fel */
+            alert("Du ska tillbaks till 1:an du dumma jävel!!!!")
+        }
+    </script>
+</body>
+</html>

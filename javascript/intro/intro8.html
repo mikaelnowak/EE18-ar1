@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduktion till JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Introduktion till JavaScript</h1>
+    </div>
+    <script>
+        /* Dagens datum */
+        var idag = new Date();
+        console.log(idag);
+        console.log(idag.getHours() + " timmar");
+        console.log(idag.getMinutes() + " minuter");
+        
+        var klockan = "Klockan är " + idag.getHours() + ":" + idag.getMinutes();
+        alert(klockan);
+
+        /* Veckodag */
+        var veckodag = idag.getDay();
+        console.log(veckodag);
+        
+        /* Månaden */
+        var månad = idag.getMonth();
+        console.log(månad);
+        
+        /* På ren svenska? */
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        var datum = idag.toLocaleDateString("se-SE", options);
+        console.log(datum);
+    </script>
+</body>
+</html>
