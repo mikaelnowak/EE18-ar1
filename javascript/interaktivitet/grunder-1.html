@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grunder i JacaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Lyssna på knapphändelser</h1>
+        <button onclick="frågaNamn()">Ange namn</button>
+        <button onclick="frågaÅlder()">Ange ålder</button>
+        <button onclick="frågaAdress()">Ange adress</button>
+        <button onclick="sammanfattning()">Sammanfattning</button>
+    </div>
+    <script>
+        /* Deklarera variablerna */
+    var namn;
+    var ålder;
+    var adress;
+
+    function frågaNamn() {
+        namn = prompt("Hej, vad heter du?");
+        console.log(namn);
+    }
+    function frågaÅlder() {
+        ålder = prompt("Hej, hur gammal är du?");
+        console.log(ålder);
+    }
+    function frågaAdress() {
+        adress = prompt("Hej, var bor du?");
+        console.log(adress);
+    }
+    function sammanfattning() {
+        alert("Hej " + namn + ", du är " + ålder + " år gammal och bor på " + adress);
+    }
+    </script>
+</body>
+</html>

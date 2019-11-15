@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grunder i JacaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Lyssna på knapphändelser</h1>
+        <button onclick="epost()">Säkra epostadressen</button>
+    </div>
+    <script>
+        function epost() {
+            var epost = prompt("Skriv ditt epost");
+            var nyttEpost = epost.replace('@', '(at)');
+
+            alert("Ditt nya epost är " + nyttEpost);
+        }
+    </script>
+</body>
+</html>
