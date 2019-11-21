@@ -67,6 +67,7 @@ body {
 }
 .kontainer h1, .kontainer h2, .kontainer h3 {
     margin: 0.5em 0;
+    color: #55a5d2;
 }
 .kontainer p {
     background: #FFF;
