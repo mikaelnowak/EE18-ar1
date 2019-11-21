@@ -15,8 +15,8 @@
             men det är vägen, som är mödan värd.</p>
         <img src="../bilder/Large_bonfire.jpg" alt="eld">
 
-        <button id="b1" onclick="mörkt()">Mörkt läge</button>
-        <button id="b2" onclick="ljust()">Ljus läge</button>
+        <button id="b1" onclick="mörkt()">Dark mode</button>
+        <button id="b2" onclick="ljust()">Light mode</button>
     </div>
     <script>
     function mörkt() {
@@ -33,20 +33,15 @@
         document.title = "Mörkt läge";
         elementBox.style.backgroundColor = "#111";
         elementH1.style.color = "#f00";
-        elementH1.style.textShadow = "1px 1px 3px #fff";
         elementP1.style.color = "white";
-        elementP1.style.textShadow = "1px 1px 2px #ff8"
         elementP1.style.backgroundColor = "#111";
         elementP2.style.color = "white";
-        elementP2.style.textShadow = "1px 1px 2px #ff8"
         elementP2.style.backgroundColor = "#111";
         elementKnapp1.style.backgroundColor = "red";
         elementKnapp1.style.color = "#000";
-        elementKnapp1.style.border = "5px solid #fff";
         elementKnapp1.style.borderRadius = "10px";
         elementKnapp2.style.backgroundColor = "red";
         elementKnapp2.style.color = "#000";
-        elementKnapp2.style.border = "5px solid #fff";
         elementKnapp2.style.borderRadius = "10px";
         elementImg.style.backgroundColor = "#111";
     }
@@ -60,7 +55,7 @@
         const elementKnapp2 = document.querySelector("#b2")
         const elementImg = document.querySelector("img")
 
-        document.body.style.backgroundColor = "#f0e9d1";
+        document.body.style.backgroundColor = "#F9F6EB";
         document.title = "Mörkt läge";
         elementBox.style.backgroundColor = "#fff";
         elementH1.style.color = "#000";
@@ -68,10 +63,14 @@
         elementP1.style.backgroundColor = "#fff";
         elementP2.style.color = "#000";
         elementP2.style.backgroundColor = "#fff";
-        elementKnapp1.style.backgroundColor = "#000";
+        elementKnapp1.style.backgroundColor = "#55a5d2";
         elementKnapp1.style.color = "#fff";
-        elementKnapp2.style.backgroundColor = "#000";
+        elementKnapp1.style.border = "0,3em";
+        elementKnapp1.style.borderRadius = "5px";
+        elementKnapp2.style.backgroundColor = "#55a5d2";
         elementKnapp2.style.color = "#fff";
+        elementKnapp2.style.border = "0px";
+        elementKnapp2.style.borderRadius = "5px";
         elementImg.style.backgroundColor = "#fff";
     }
     </script>
