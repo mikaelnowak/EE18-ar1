@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="klocka">
+            <p id="klocka">00<span class="kolon">:</span>00<span class="kolon">:</span>00</p>
+        </div>
+        <script>
+            const elementH1 = document.querySelector("#klocka");
+            setInterval(klocka, 1000);
+
+            function klocka() {
+                var tid = new Date();
+                var hrs = tid.getUTCHours();
+                var min = tid.getMinutes();
+                var sec = tid.getSeconds();
+                var tidSec, tidMin, tidHrs;
+                if (sec < 10) {
+                    tidSec = "0" + sec;
+                } else {
+                    tidSec = sec;
+                }
+                if (min < 10) {
+                    tidMin = "0" + min;
+                } else {
+                    tidMin = min;
+                }
+                if (hrs < 10) {
+                    tidHrs = "0" + hrs;
+                } else {
+                    tidHrs = hrs;
+                }
+                console.log(tidHrs + tidMin + tidSec);
+                elementH1.innerHTML = tidHrs + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
+            }
+        </script>
+    </div>
+</body>
+</html>

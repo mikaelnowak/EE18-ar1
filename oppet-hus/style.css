@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Odibee+Sans|Source+Sans+Pro&display=swap');
+/* font-family: 'Odibee Sans', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Luckiest Guy', cursive; */
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utseende på sidan */
+
+/* Utseende på klockan */
+body {
+    background: #888;
+}
+.kontainer .klocka {}
+.kontainer .klocka p {
+    font-family: 'Odibee Sans', cursive;
+    color: #f00;
+    width: 38%;
+    font-size: 40px;
+    background: #000;
+    padding: 25px;
+    margin: 300px auto;
+    text-align: center;
+    font-size: 100px;
+    border-radius: 10px;
+    border: #fff 5px solid;
+    box-shadow: 0 0 5px #000;
+}
+.kolon {
+    color: #fff;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
