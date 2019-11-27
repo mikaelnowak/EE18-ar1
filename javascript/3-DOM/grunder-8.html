@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer kol3">
+        <img id="bild1" src="./foton/svart-bil.jpg" alt="Svart bil">
+        <img id="bild2" src="./foton/racebil.jpg" alt="Racebil">
+        <img id="bild3" src="./foton/motorcyckel.jpg" alt="Jul på en motorcyckel">
+        <button onclick="blink1()">Svart/Vit</button>
+        <button onclick="invertera()">Invertera</button>
+        <button onclick="sudigt()">Blur</button>
+    </div>
+    <script>
+        const elementBild1 = document.querySelector("#bild1");
+        const elementBild2 = document.querySelector("#bild2");
+        const elementBild3 = document.querySelector("#bild3");
+
+        function blink1() {
+            setInterval(svartVit, 10);
+        }
+
+        function invertera() {
+            elementBild2.classList.toggle("invertera");
+        }
+
+        function sudigt() {
+            elementBild3.classList.toggle("blur");
+        }
+
+        function svartVit() {
+            elementBild1.classList.toggle("gråskala");
+            
+        }
+    </script>
+</body>
+</html>
