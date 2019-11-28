@@ -36,8 +36,9 @@
                 } else {
                     tidHrs = hrs;
                 }
-                console.log(tidHrs + tidMin + tidSec);
-                elementH1.innerHTML = tidHrs + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
+                var hrsSv = tidHrs + 1;
+                console.log(hrsSv + tidMin + tidSec);
+                elementH1.innerHTML = hrsSv + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
             }
         </script>
     </div>

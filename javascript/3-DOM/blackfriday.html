@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Black Friday</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <img class="animated" id="blackfriday" src="./foton/maxresdefault.jpg" alt="Mediamarkt reklam">
+        <div class="dold animated" id="reklamer">
+            <div class="rek1">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+            <div class="rek2">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+            <div class="rek3">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+            <div class="rek4">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+            <div class="rek5">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+            <div class="rek6">
+                <img src="./foton/reklam.png" alt="Reklam för en dator">
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Element vi jobbar på */
+        const elementImg = document.querySelector("#blackfriday");
+        const elementRek = document.querySelector("#reklamer");
+
+        /* Fördröjning */
+        setTimeout(visaBild, 3000);
+        setTimeout(reklamer, 4000);
+
+        
+        function visaBild() {
+            elementImg.classList.add("fadeOutDown");
+        }
+
+        function reklamer() {
+            elementRek.style.display = "block";
+            elementRek.style.gridtemplatecolumns = "1fr 1fr 1fr";
+            elementRek.classList.add("fadeInDown");
+        }
+    </script>
+</body>
+</html>

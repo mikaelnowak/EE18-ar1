@@ -128,3 +128,7 @@ body {
 .kontainer .blur {
     filter: blur(10px);
 }
+.kontainer .reklamer {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}

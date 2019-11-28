@@ -37,7 +37,7 @@ body {
 }
 .kolon {
     color: #fff;
-    animation: blinker 1s linear infinite;
+    animation: blinker 2s linear infinite;
 }
 
 @keyframes blinker {
