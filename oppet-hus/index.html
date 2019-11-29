@@ -33,12 +33,9 @@
                 }
                 if (hrs < 10) {
                     tidHrs = "0" + hrs;
-                } else {
-                    tidHrs = hrs;
                 }
-                var hrsSv = tidHrs + 1;
-                console.log(hrsSv + tidMin + tidSec);
-                elementH1.innerHTML = hrsSv + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
+                console.log(hrs + tidMin + tidSec);
+                elementH1.innerHTML = tidHrs + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
             }
         </script>
     </div>
