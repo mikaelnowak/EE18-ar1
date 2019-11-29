@@ -1,0 +1,7 @@
+1. 
+Inga stora boxtäver eller mellanslag i fillnamnet
+Föjla sättet att bygga en webbsida/webbplatform.
+Sortera sin CSS med första tagen, andra tagen o.s.v.
+
+2.
+Om man kollar ner på VS code så kan man se en varning och en fel symbol. Dom kan man kolla på då och då för att kolla om man har fel i sin kod eller inte. Man ska också kolla på sidan och kolla om man har skrivit något fel om själva felet är utseendet.
