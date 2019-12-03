@@ -19,16 +19,18 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 /* Utseende på klockan */
 body {
     background: #888;
+    margin: 10px;
 }
-.kontainer .klocka {}
-.kontainer .klocka p {
+.kontainer .sidhuvud {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.kontainer .sidhuvud .klocka {
     font-family: 'Odibee Sans', cursive;
     color: #f00;
-    width: 38%;
     font-size: 40px;
     background: #000;
     padding: 25px;
-    margin: 300px auto;
     text-align: center;
     font-size: 100px;
     border-radius: 10px;
