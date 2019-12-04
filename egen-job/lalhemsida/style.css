@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai|Oswald&display=swap');
+/* font-family: 'Baloo Bhai', cursive;
+font-family: 'Oswald', sans-serif; */
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidans utseende */
+body {
+
+}
+.kontainer {
+    background: #333;
+}
+
+/* Sidans sidhuvud */
+.kontainer .sidhuvud {
+    background: #555;
+    height: 250px;
+    padding: 25px;
+    text-align: center;
+}
+.kontainer .sidhuvud h1 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.kontainer .sidhuvud ul {
+    list-style: none;
+}
+.kontainer .sidhuvud ul li {
+
+}
+
+/* Sidans innehåll */
+.kontainer .innehåll {
+    background: #888;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 1000px;
+}
+.kontainer .innehåll h2 {
+
+}
+.kontainer .innehåll p {
+
+}
