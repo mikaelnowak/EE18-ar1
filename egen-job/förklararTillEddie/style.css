@@ -10,6 +10,17 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 
-body {
-    ba
+a {
+    color: #f00;
+    text-decoration: none;
+    font-kerning:       ;
+}
+.kontainer {
+    display: inline-block;
+}
+.kontainer h1 {
+    display
+}
+.kontainer img {
+
 }
