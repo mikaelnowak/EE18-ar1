@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About KlobCloud International</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="sidhuvud">
+            <h1>KlobCloud International</h1>
+            <ul>
+                <li><a href="./aboutUs.html">About us</a></li>
+                <li class="på">Get a server</li>
+                <li><a href="./adminPrivilagers.html">Admin privileges</a></li>
+            </ul>
+        </div>
+        <div class="innehåll">
+            <h2>Get a server</h2>
+            <p class="mitten">Select your continent:</p>
+            <div class="select">
+                <div onclick="europa()" id="europa" class="kontinent animated">
+                    <img src="./bilder/europa.png" alt="'Europe">
+                    <p>Europe</p>
+                </div>
+                <div class="kontinent">
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="kontinent">
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="kontinent">
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <script>
+
+        const elementEuropa = document.querySelector("#europa");
+
+        function europa() {
+            elementEuropa.classList.add('fadeOutLeft');
+        }
+        </script>
+    </div>
+</body>
+</html>
