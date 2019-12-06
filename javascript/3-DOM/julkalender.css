@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Calistoga|Courgette&display=swap');
+/* font-family: 'Calistoga', cursive;
+font-family: 'Courgette', cursive; */
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styla kalendern */
+body {
+    background: url("./foton/sincerely-media-8EhZobADF8M-unsplash.jpg");
+}
+.kontainer {
+    background: #fff;
+    width: 1000px;
+    margin: 100px auto;
+    text-align: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 25px;
+}
+h1 {
+    font-family: 'Calistoga', cursive;
+    font-size: 100px;
+    border: 5px dashed #f00;
+    background: darkgreen;
+    border-radius: 100px;
+    margin-bottom: 30px;
+}
+.kalender {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.ruta {
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    background: #f00;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.ruta:hover {
+    background: #f04;
+    box-shadow: 0 0 10px #f00;
+}
+.klapp1 {
+    font-size: 0;
+    background: url("./foton/nkauti1571284271381.jpg") no-repeat;
+    animation: tona 5s;
+}
+@keyframes tona {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
