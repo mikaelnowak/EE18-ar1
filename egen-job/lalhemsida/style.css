@@ -19,12 +19,12 @@ body {
     
 }
 .kontainer {
-    background: #333;
+    background: url(./bilder/tilted_dirt.png);
 }
 
 /* Sidans sidhuvud */
 .kontainer .sidhuvud {
-    background: #555;
+    background: #dcfbff;
     height: 100px;
     display: grid;
     grid-template-columns: 45% 55%;
@@ -51,7 +51,11 @@ body {
     padding: 40px 15px;
     font-size: 20px;
     cursor: default;
-
+}
+.kontainer .sidhuvud ul li:hover {
+    animation-name: animera;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 .kontainer .sidhuvud a {
     color: #000;
@@ -64,8 +68,8 @@ body {
 /* Sidans innehåll */
 .kontainer .innehåll {
     font-family: Arial, Helvetica, sans-serif;
-    background: #888;
-    width: 800px;
+    background: #fff;
+    width: 900px;
     margin: 0 auto;
     padding: 20px 70px;
     height: 1000px;
@@ -91,13 +95,38 @@ body {
 }
 .kontainer .innehåll .select .kontinent {
     width: 300px;
-    height: 325px;
-    background: #444;
+    height: 300px;
+    border: 3px solid #888;
+}
+.kontainer .innehåll .select .kontinent:hover {
+    animation-name: animera_kontinent;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 .kontainer .innehåll .select .kontinent img {
-    width: 300px;
-    height: 300px;
+    width: 293px;
 }
 .kontainer .innehåll .select .kontinent p {
     text-align: center;
+}
+
+/* Aktiva serverar */
+.kontainer .innehåll .select .serverEU {
+    width: 300px;
+    height: 400px;
+    background: red;
+    display: none;
+}
+.kontainer .innehåll .select .serverEU p {
+    font-size: 20px;
+}
+
+/* Animation */
+@keyframes animera {
+    from{transform: scale(1)}
+    to{transform: scale(1.2)}
+}
+@keyframes animera_kontinent {
+    from{transform: scale(1)}
+    to{transform: scale(1.1)}
 }

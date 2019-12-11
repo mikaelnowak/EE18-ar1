@@ -25,27 +25,50 @@
                 <div onclick="europa()" id="europa" class="kontinent animated">
                     <img src="./bilder/europa.png" alt="'Europe">
                     <p>Europe</p>
+                    <p class="serverEU">Serevr 1</p>
+                    <p class="serverEU">Serevr 2</p>
+                    <p class="serverEU">Serevr 3</p>
+                    <p class="serverEU">Serevr 4</p>
+                    <p class="serverEU">Serevr 5</p>
                 </div>
-                <div class="kontinent">
+                <div onclick="asia()" id="asia" class="kontinent animated">
                     <img src="" alt="">
-                    <p></p>
+                    <p>Asia</p>
                 </div>
-                <div class="kontinent">
+                <div onclick="nAmerika()" id="nAmerika" class="kontinent animated">
                     <img src="" alt="">
-                    <p></p>
+                    <p>North amerika</p>
                 </div>
-                <div class="kontinent">
+                <div onclick="sAmerika()" id="sAmerika" class="kontinent animated">
                     <img src="" alt="">
-                    <p></p>
+                    <p>South amerika</p>
                 </div>
             </div>
         </div>
         <script>
 
         const elementEuropa = document.querySelector("#europa");
+        const elementAsia = document.querySelector("#asia")
+        const elementnAmerika = document.querySelector("#nAmerika")
+        const elementSAmerika = document.querySelector("#sAmerika")
+        const elementServerEU = document.querySelectorAll(".server")
 
         function europa() {
             elementEuropa.classList.add('fadeOutLeft');
+            setInterval(2000, serverEU);
+        }
+        function asia() {
+            elementAsia.classList.add("fadeOutRight")
+        }
+        function nAmerika() {
+            elementnAmerika.classList.add('fadeOutLeft');
+        }
+        function sAmerika() {
+            elementSAmerika.classList.add("fadeOutRight");
+        }
+
+        function serverEU() {
+            elementServerEU.style.display("block");
         }
         </script>
     </div>
