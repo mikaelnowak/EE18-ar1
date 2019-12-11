@@ -17,11 +17,21 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 body {
     background: url("./foton/sincerely-media-8EhZobADF8M-unsplash.jpg");
 }
+
+/* Sidan i mitten av webbläsarfönstret */
+html, body {
+    height: 100%;
+}
+.mitten {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .kontainer {
     background: #fff;
     width: 1000px;
-    margin: 100px auto;
-    text-align: center;
     text-align: center;
     border-radius: 15px;
     padding: 25px;
@@ -37,8 +47,9 @@ h1 {
 .kalender {
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto auto auto;
     grid-gap: 20px;
+    justify-content: center;
 }
 .ruta {
     font-family: 'Courgette', cursive;
@@ -50,15 +61,35 @@ h1 {
     border-radius: 10px;
     cursor: pointer;
     transition-duration: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .ruta:hover {
-    background: #f04;
+    background: #f04 no-repeat center;
     box-shadow: 0 0 10px #f00;
 }
 .klapp1 {
     font-size: 0;
     background: url("./foton/nkauti1571284271381.jpg") no-repeat;
+    background-size: 80px 80px;
     animation: tona 5s;
+    pointer-events: none;
+}
+.klapp2 {
+    font-size: 0;
+    background: url("./foton/klocka.jpg") no-repeat;
+    background-size: 80px 80px;
+    animation: tona 2s;
+    pointer-events: none;
+}
+.klappText {
+    font: 12px sans-serif;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    animation: tona 2s;
+    pointer-events: none;
+    height:;
 }
 @keyframes tona {
     from {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Infoga text i sidan</h1>
+        <p id="text1" onclick="visaText1()">Klicka på mig</p>
+        <p id="text2" onclick="visaText2()">Klicka på mig också</p>
+    </div>
+    <script>
+        const elementText1 = document.querySelector("#text1");
+        const elementText2 = document.querySelector("#text2");
+
+        function visaText1() {
+            elementText1.textContent = "Text 1 hahahahahah";
+        }
+        function visaText2() {
+            elementText2.innerHTML =    "Sankta Lucia, ljusklara hägring,<br>" +
+                                        "sprid i vår vinternatt glans av din fägring.<br>" +
+                                        "Drömmar med vingesus under oss sia,<br>" +
+                                        "tänd dina vita ljus, Sankta Lucia." +
+                                        "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bWVnrR8K6T8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+        }
+    </script>
+</body>
+</html>

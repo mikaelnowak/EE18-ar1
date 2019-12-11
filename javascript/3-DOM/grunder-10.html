@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Infoga text i sidan</h1>
+        <p id="mobil">Hemligt mobilnr</p>
+        <p id="adress">Hemlig adress</p>
+        <div id="avatar">Hemlig avatar</div>
+        <button onmousedown="visaNr()" onmouseup="döljNr()">Visa mobilnr</button>
+        <button onblur="visaAdress()">Visa adress</button>
+        <button onmouseover="visaBild()">Visa avatarbild</button>
+    </div>
+    <script>
+        const elementMobil = document.querySelector("#mobil");
+        const elementAdress = document.querySelector("#adress");
+        const elementBild = document.querySelector("#avatar");
+
+        function visaMobilnr() {
+            elementMobil.textContent = "0701231231";
+        }
+        function visaNr() {
+            elementMobil.textContent = "0701231231";
+        }
+        function döljNr() {
+            elementMobil.textContent = "Hemligt mobilnr";
+        }
+        function visaAdress() {
+            elementAdress.textContent = "Drebantvägen 15";
+        }
+        function visaBild() {
+            elementBild.innerHTML = "<img src=\"./foton/avatar-icon_1375446.jpg\" alt=\"Hej\">"
+        }
+
+    </script>
+</body>
+</html>
