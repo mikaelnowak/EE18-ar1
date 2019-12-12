@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Läsa av input-rutor</h1>
+
+        <h2>Input</h2>
+        <label>Förnamn</label>
+        <input id="förnamn" type="text">
+        <label>Efternamn</label>
+        <input id="efternamn" type="text">
+        <button onclick="läsNamn()">Skicka</button>
+
+        <h2>Output</h2>
+        <p>asd</p>
+    </div>
+    <script>
+        const elementFör = document.querySelector("#förnamn");
+        const elementEfter = document.querySelector("#efternamn");
+        const elementResultat = document.querySelector("p");
+
+        function läsNamn() {
+            var förnamn = elementFör.value;
+            var efternamn = elementEfter.value;
+            
+            elementResultat.textContent = "Ditt namn är " + förnamn + " " + efternamn;
+        }
+    </script>
+</body>
+</html>

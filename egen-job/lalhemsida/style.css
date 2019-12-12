@@ -97,9 +97,10 @@ body {
     width: 300px;
     height: 300px;
     border: 3px solid #888;
+    animation-name: in;
 }
 .kontainer .innehåll .select .kontinent:hover {
-    animation-name: animera_kontinent;
+    animation-name: out;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
@@ -126,7 +127,11 @@ body {
     from{transform: scale(1)}
     to{transform: scale(1.2)}
 }
-@keyframes animera_kontinent {
+@keyframes out {
     from{transform: scale(1)}
     to{transform: scale(1.1)}
+}
+@keyframes in {
+    from{transform: scale(1.1)}
+    to{transform: scale(1)}
 }

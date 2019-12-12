@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>00:00:00</h1>
+        <button onclick="klocka()">Visa klockan</button>
+    </div>
+    <script>
+        const elementH1 = document.querySelector("h1");
+
+        function klocka() {
+            setInterval(1000, tid);
+        }
+        
+        function tid() {
+            var tid = new Date();
+            var hrs = tid.getUTCHours() + 1;
+            var min = tid.getMinutes();
+            var sec = tid.getSeconds();
+            var tidSec, tidMin, tidHrs;
+            if (sec < 10) {
+                tidSec = "0" + sec;
+            } else {
+                tidSec = sec;
+            }
+            if (min < 10) {
+                tidMin = "0" + min;
+            } else {
+                tidMin = min;
+            }
+            if (hrs < 10) {
+                tidHrs = "0" + hrs;
+            }
+            console.log(hrs + tidMin + tidSec);
+            elementH1.innerHTML = hrs + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
+        }
+    </script>
+</body>
+</html>

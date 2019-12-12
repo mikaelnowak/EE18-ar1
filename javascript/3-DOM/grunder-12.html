@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <button onclick="bort()">Tryck inte</button>
+    </div>
+    <script>
+        var elementBox = document.querySelector("div");
+        
+        function bort() {
+            elementBox.innerHTML = "<h1>HAHHAHAHHAHA MUUUUUU</h1>" +
+            "<img src=\"./foton/alistar.gif\" alt=\"MUMU\">";
+        }
+    </script>
+</body>
+</html>

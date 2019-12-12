@@ -22,7 +22,7 @@
             <h2>Get a server</h2>
             <p class="mitten">Select your continent:</p>
             <div class="select">
-                <div onclick="europa()" id="europa" class="kontinent animated">
+                <div onclick="europa()" id="europa" class="kontinent">
                     <img src="./bilder/europa.png" alt="'Europe">
                     <p>Europe</p>
                     <p class="serverEU">Serevr 1</p>
@@ -31,15 +31,15 @@
                     <p class="serverEU">Serevr 4</p>
                     <p class="serverEU">Serevr 5</p>
                 </div>
-                <div onclick="asia()" id="asia" class="kontinent animated">
+                <div onclick="asia()" id="asia" class="kontinent">
                     <img src="asd" alt="">
                     <p>Asia</p>
                 </div>
-                <div onclick="nAmerika()" id="nAmerika" class="kontinent animated">
+                <div onclick="nAmerika()" id="nAmerika" class="kontinent">
                     <img src="asd" alt="">
                     <p>North amerika</p>
                 </div>
-                <div onclick="sAmerika()" id="sAmerika" class="kontinent animated">
+                <div onclick="sAmerika()" id="sAmerika" class="kontinent">
                     <img src="asd" alt="">
                     <p>South amerika</p>
                 </div>
@@ -54,21 +54,20 @@
         const elementServerEU = document.querySelectorAll(".server")
 
         function europa() {
-            elementEuropa.classList.add('fadeOutLeft');
-            setInterval(2000, serverEU);
+            
         }
         function asia() {
-            elementAsia.classList.add("fadeOutRight")
+            
         }
         function nAmerika() {
-            elementnAmerika.classList.add('fadeOutLeft');
+
         }
         function sAmerika() {
-            elementSAmerika.classList.add("fadeOutRight");
+            
         }
 
         function serverEU() {
-            elementServerEU.style.display("block");
+            
         }
         </script>
     </div>
