@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Spamskydd</h1>
+
+        <h2>Input</h2>
+        <label>.</label>
+        <input id="tal" type="text">
+        <button onclick="spam()">Skicka</button>
+
+        <h2>Output</h2>
+        <p>Resultat</p>
+    </div>
+    <script>
+        const elementInput = document.querySelector("input");
+        const elementP = document.querySelector("p");
+        const elementLabel = document.querySelector("label");
+
+        var tal1 = Math.ceil(Math.random() * 10);
+        var tal2 = Math.ceil(Math.random() * 10);
+
+        var summa = tal1 + tal2;
+
+        elementLabel.textContent = "Vad blir " + tal1 + " + " + tal2;
+
+        function spam() {
+            var svar = elementInput.value;
+
+            if(svar == summa) {
+                elementP.textContent = "Du gissa rätt! svaret är " + summa;
+            } else {
+                elementP.textContent = "Du har fel! Svaret är " + tal1 + " + " + tal2 + " = " + summa;
+            }
+        }
+        
+    </script>
+</body>
+</html>

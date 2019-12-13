@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arbeta med DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Gissa tal</h1>
+
+        <h2>Input</h2>
+        <label>Gissa ett tal 1-10</label>
+        <input id="tal" type="text">
+        <button onclick="läsaTal()">Skicka</button>
+
+        <h2>Output</h2>
+        <p>Resultat</p>
+    </div>
+    <script>
+        const elementInput = document.querySelector("input");
+        const elementP = document.querySelector("p");
+
+        var slumptal = Math.ceil(Math.random() * 69);
+        console.log(slumptal);
+
+        function läsaTal() {
+            var gissning = elementInput.value;
+            console.log("Input = " + gissning);
+
+            if (gissning == slumptal) {
+               /* Rätt svar */
+               elementP.textContent = "Du gissa rätt!!!"
+           } else {
+               /* Fel svar */
+               elementP.innerHTML =     "Du gissa fätt!!!" +
+                                        "<img src=\"./foton/noob.gif\" alt=\"Noob\">"
+           }
+        }
+    </script>
+</body>
+</html>
