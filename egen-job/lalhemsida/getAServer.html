@@ -22,18 +22,16 @@
             <h2>Get a server</h2>
             <p class="mitten">Select your continent:</p>
             <div class="select">
-                <div onclick="europa()" id="europa" class="kontinent">
-                    <img src="./bilder/europa.png" alt="'Europe">
-                    <p>Europe</p>
-                    <p class="serverEU">Serevr 1</p>
-                    <p class="serverEU">Serevr 2</p>
-                    <p class="serverEU">Serevr 3</p>
-                    <p class="serverEU">Serevr 4</p>
-                    <p class="serverEU">Serevr 5</p>
-                </div>
+                <a href="./getserver/getserver-eu.html">
+                    <div onclick="europa()" id="europa" class="kontinent">
+                        <img src="./bilder/europa.png" alt="'Europe">
+                        <p>Europe</p>
+                    </div>
+                </a>
                 <div onclick="asia()" id="asia" class="kontinent">
-                    <img src="asd" alt="">
+                    <img src="./bilder/asia.png" alt="">
                     <p>Asia</p>
+                    <hr>
                 </div>
                 <div onclick="nAmerika()" id="nAmerika" class="kontinent">
                     <img src="asd" alt="">
@@ -45,31 +43,6 @@
                 </div>
             </div>
         </div>
-        <script>
-
-        const elementEuropa = document.querySelector("#europa");
-        const elementAsia = document.querySelector("#asia")
-        const elementnAmerika = document.querySelector("#nAmerika")
-        const elementSAmerika = document.querySelector("#sAmerika")
-        const elementServerEU = document.querySelectorAll(".server")
-
-        function europa() {
-            
-        }
-        function asia() {
-            
-        }
-        function nAmerika() {
-
-        }
-        function sAmerika() {
-            
-        }
-
-        function serverEU() {
-            
-        }
-        </script>
     </div>
 </body>
 </html>
