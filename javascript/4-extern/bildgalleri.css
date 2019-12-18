@@ -1,0 +1,22 @@
+.kontainer #bildruta {
+    width: 100%;
+    height: 450px;
+    background: #ccc;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+.kontainer #bildruta img {
+    width: 280px;
+    height: 100%;
+}
+.kontainer .kol8 {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 10px;
+}
+.kontainer .kol8 img {
+    padding: 0;
+    width: 100%;
+    border: 1px solid yellow;
+}
