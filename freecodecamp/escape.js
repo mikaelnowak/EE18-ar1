@@ -9,5 +9,5 @@
 \f      From feed
 */
 
-var string = "FörstaLinien\n\t\\AndraLinjen\nTredjeLinjen";
+var string = "FörstaLinien\n\t\bAndraLinjen\nTredjeLinjen";
 console.log(string);

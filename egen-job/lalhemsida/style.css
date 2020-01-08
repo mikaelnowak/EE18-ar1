@@ -21,6 +21,7 @@ body {
 .kontainer {
     background: url(./bilder/tilted_dirt.png);
     color: #fff;
+    height: 1000px;
 }
 
 /* Sidans sidhuvud */
@@ -102,10 +103,6 @@ body {
     gap: 30px;
     margin: 100px 0 0 15px;
 }
-.kontainer .innehåll .select a {
-    color: #fff;
-    text-decoration: none;
-}
 .kontainer .innehåll .select .kontinent {
     width: 300px;
     height: 300px;
@@ -126,8 +123,20 @@ body {
     text-align: center;
 }
 
-/* Aktiva serverar */
+/* Get a server innehåll */
+.kontainer .getServer {
+    background: #00000088;
+    width: 500px;
+    margin: 0 100px 0 0;
+}
 
+.kontainer .getServer ul {
+    text-align: center;
+    padding: 10px;
+}
+.kontainer .getServer ul li {
+    list-style: none;
+}
 
 /* Animation */
 @keyframes huvud-in {
