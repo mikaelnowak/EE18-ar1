@@ -12,15 +12,17 @@
     <div class="kontainer">
         <h1>När då då?</h1>
         <h3>Fråga</h3>
-        <textarea cols="30" rows="10">Jerry Seinfeld föds</textarea>
+        <textarea cols="30" rows="10"></textarea>
         <label>Vilket år?</label>
-        <input type="text" value="1954">
-        <button>Skicka</button>
+        <input type="text" value="">
+        <button id="skicka">Skicka</button>
+        <h3>Poäng</h3>
+        <input id="poäng" type="text" readonly>
         <h3>Svar</h3>
-        <i class="fa fa-thumbs-up"></i>
-        <i class="fa fa-thumbs-down"></i>
-        <button>Nästa fråga</button>
+        <i id="upp" class="fa fa-thumbs-up"></i>
+        <i id="ner" class="fa fa-thumbs-down"></i>
+        <button id="nästa">Nästa fråga</button>
     </div>
-    <script src="./spel.js"></script>
+    <script defer src="./spel.js"></script>
 </body>
 </html>
