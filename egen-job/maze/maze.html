@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Maze</title>
+    <link rel="stylesheet" href="maze.css">
+</head>
+<body>
+    <div class="vanBox">
+        <p></p>
+    </div>
+    <h1>Maze</h1>
+    <div class="kontainer">
+        <table>
+            <tr>
+                <td class="start wallU wallL"></td>
+                <td class="wallU"></td>
+                <td class="wallU"></td>
+                <td class="wallU wallR"></td>
+            </tr>
+            <tr>
+                <td class="wallL"></td>
+                <td class="wallU wallR"></td>
+                <td></td>
+                <td class="wallR wallL wallD"></td>
+            </tr>
+            <tr>
+                <td class="wallL wallR"></td>
+                <td></td>
+                <td class="wallU wallD"></td>
+                <td class="wallR"></td>
+            </tr>
+            <tr>
+                <td class="wallL wallD"></td>
+                <td class="wallD wallU wallR"></td>
+                <td class="noRoom wallD"></td>
+                <td class="slut wallR wallD wallL"></td>
+            </tr>
+        </table>
+        <div class="knappar">
+            <p></p>
+            <button id="up"><i class='fas fa-arrow-up'></i></button>
+            <p></p>
+            <button id="left"><i class='fas fa-arrow-left'></i></button>
+            <p></p>
+            <button id="right"><i class='fas fa-arrow-right'></i></button>
+            <p></p>
+            <button id="down"><i class='fas fa-arrow-down'></i></button>
+            <p></p>
+        </div>
+        <img id="gubbe" src="./gubbe.png" alt="Gubbe">
+    </div>
+    <script src="maze.js"></script>
+</body>
+</html>

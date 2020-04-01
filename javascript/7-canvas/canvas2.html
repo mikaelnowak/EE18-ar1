@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector('canvas');
+
+        /* Storleken */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Rityta */
+        var ctx = eCanvas.getContext("2d");
+
+        //Rita den tjeckiska flaggan
+        ctx.beginPath();
+        ctx.strokeRect(100, 100, 300, 200);
+        ctx.fillStyle = "darkred";
+        ctx.fillRect(100, 200, 300, 100);
+        ctx.moveTo(100, 100);
+        ctx.lineTo(250, 200);
+        ctx.lineTo(100, 300);
+        ctx.fillStyle = "blue";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(600, 200, 100, 0, 2 * Math.PI);
+        ctx.stroke();
+        
+
+    </script>
+</body>
+</html>

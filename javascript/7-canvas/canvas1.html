@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector('canvas');
+
+        /* Storleken */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Rityta */
+        var ctx = eCanvas.getContext("2d");
+
+        /* Kvadrat */
+        /* ctx.fillRect(100, 100, 200, 200); */
+
+        /* Rita en färgad rektangel */
+        /* ctx.fillStyle = "red";
+        ctx.fillRect(100, 400, 200, 100);
+        ctx.fillStyle = "black";
+        ctx.fillRect(200, 410, 200, 50); */
+
+        //rutmönster
+        /* ctx.fillStyle = "red";
+        ctx.fillRect(400, 200, 50, 50);
+        ctx.fillStyle = "green";
+        ctx.fillRect(450, 200, 50, 50);
+        ctx.fillStyle = "red";
+        ctx.fillRect(500, 200, 50, 50);
+        ctx.fillStyle = "green";
+        ctx.fillRect(400, 250, 50, 50);
+        ctx.fillStyle = "red";
+        ctx.fillRect(450, 250, 50, 50);
+        ctx.fillStyle = "green";
+        ctx.fillRect(500, 250, 50, 50); */
+
+        //Sverige
+        /* ctx.fillStyle = "blue";
+        ctx.fillRect(400, 200, 250, 150);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(480, 200, 25, 150);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(400, 265, 250, 25); */
+
+        //Rita en linje
+        ctx.beginPath();
+        ctx.moveTo(0, 0)
+        ctx.lineWidth = 5;
+        ctx.lineTo(400, 300);
+        ctx.strokeStyle = "black";
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, 0)
+        ctx.lineWidth = 1;
+        ctx.lineTo(400, 300);
+        ctx.lineTo(300, 600);
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+
+    </script>
+</body>
+</html>

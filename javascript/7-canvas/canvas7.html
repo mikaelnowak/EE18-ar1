@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector('canvas');
+
+        /* Storleken */
+        eCanvas.width = 1300;
+        eCanvas.height = 1000;
+
+        /* Rityta */
+        var ctx = eCanvas.getContext("2d");
+
+        ctx.fillStyle = "#ff99db50";
+        ctx.font = "24px sans-serif"
+
+        //Slumpa fram ett tal
+        var x = Math.ceil(Math.random() * 100);
+
+        var x = Math.ceil(Math.random() * 1300);
+        ctx.fillRect(x, 100, 50, 50);
+        
+        //slump var som hälst
+        var x = Math.ceil(Math.random() * 1300);
+        var y = Math.ceil(Math.random() * 1000);
+        ctx.fillRect(x, y, 50, 50);
+
+        //sudda bort skärmen
+        ctx.clearRect(0, 0, 1300, 1000);
+
+        //slumpa 10 fyrkanter
+        /* for (var e = 0; e = 9; e++) {
+
+        } */
+        
+        /* for (var e = 0; e <= 9; e++) {
+            var x = Math.ceil(Math.random() * 1300);
+            var y = Math.ceil(Math.random() * 1000);
+            ctx.fillRect(x, y, 50, 50);
+        }
+        for (var e = 0; e <= 99; e++) {
+            var x = Math.ceil(Math.random() * 1300);
+            var y = Math.ceil(Math.random() * 1000);
+            ctx.fillRect(x, y, 50, 50);
+        }
+        for (var e = 0; e <= 99; e++) {
+            var x = Math.ceil(Math.random() * 1300);
+            var y = Math.ceil(Math.random() * 1000);
+            var s = Math.ceil(Math.random() * 50);
+            ctx.fillRect(x, y, s, s);
+        } */
+        
+        for (var e = 0; e <= 99; e++) {
+            var x = Math.ceil(Math.random() * 1300);
+            var y = Math.ceil(Math.random() * 1000);
+            var s = Math.ceil(Math.random() * 50);
+            ctx.fillRect(x, y, s, s);
+        }
+
+    </script>
+</body>
+</html>

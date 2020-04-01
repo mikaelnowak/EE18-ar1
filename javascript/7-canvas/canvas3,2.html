@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector('canvas');
+
+        /* Storleken */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Rityta */
+        var ctx = eCanvas.getContext("2d");
+
+        ctx.beginPath();
+        ctx.arc(300, 300, 150, 0 , 2 * Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(375, 300);
+
+    </script>
+</body>
+</html>

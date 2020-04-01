@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* Element vi jobbar med */
+        const eCanvas = document.querySelector('canvas');
+
+        /* Storleken */
+        eCanvas.width = 800;
+        eCanvas.height = 600;
+
+        /* Rityta */
+        var ctx = eCanvas.getContext("2d");
+
+        ctx.fillStyle = "lightblue";
+        ctx.strokeStyle = "#454545";
+
+        ctx.fillRect(0, 0, 200, 50);
+        ctx.strokeRect(100, 100, 200, 50);
+
+        var x = 100;
+        var y = 200;
+        ctx.fillStyle = "pink";
+        ctx.fillRect
+
+        //text
+        ctx.fillStyle = "red";
+        ctx.strokeStyle = "black";
+
+        /* Skriva en text */
+        ctx.font = "90px Arial";
+        ctx.fillText("Hello World", 100, 100);
+        ctx.strokeText("Hello World", 100, 100);
+
+
+
+        //img
+        var cobra = new Image();
+        cobra.src = "./bilder/cobra_PNG57.png.png";
+        cobra.addEventListener('load', function() {
+            ctx.drawImage(cobra, 300, 200, 200, 200);
+        });
+
+        //rita en gul rektangel
+        var x = 100, y = 500, w = 70, h = 50;
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(x, y, w, h);
+
+        //radera canvas
+        /* ctx.clearRect(0, 0, 800, 600); */
+
+        //loop 5 ggr
+        for (var i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        for (var i = 100; i <= 500; i += 100) {
+            console.log(i);
+        }
+
+        //rita 5 rect samma ställe
+        for (var i = 1; i <= 5; i++) {
+            var x = 100, y = 100, w = 70, h = 50;
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(x, y, w, h);
+        }
+
+        //5 rect olika ställen
+        for (var y = 100; y <= 500; y += 100) {
+            console.log(i);
+            var x = 100, w = 70, h = 50;
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(x, y, w, h);
+            }
+
+    </script>
+</body>
+</html>
