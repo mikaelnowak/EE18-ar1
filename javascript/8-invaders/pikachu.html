@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./pikachu.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        /* ****************************** */
+        /*        Ställ in canvas         */
+        /* ****************************** */
+        const eCanvas = document.querySelector('canvas');
+        eCanvas.width = 1600;
+        eCanvas.height = 1200;
+        var ctx = eCanvas.getContext('2d');
+
+        /* ****************************** */
+        /*           Objekten             */
+        /* ****************************** */
+        var figurX = Math.random() * 1600;
+        var figurY = 0;
+
+        /* var cookieMonster = new Image();
+        cookieMonster.src = "./iconer/icons8-cookie-monster-50.png"
+        var cookieMonsterX = Math.random() * 1600;
+        var cookieMonsterY = 0; */
+
+        var cookieMonster = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        cookieMonster.bild.src = "./iconer/icons8-cookie-monster-50.png";
+
+        var darthVader = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        darthVader.bild.src = "./iconer/icons8-darth-vader-50.png";
+
+        var darthstroke = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        darthstroke.bild.src = "./iconer/icons8-deathstroke-50.png";
+
+        var groot = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        groot.bild.src = "./iconer/icons8-groot-50.png";
+
+        var harleyQuinn = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        harleyQuinn.bild.src = "./iconer/icons8-harley-quinn-dc-50.png";
+
+        var homerSimp = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        homerSimp.bild.src = "./iconer/icons8-homer-simpson-50.png";
+
+        var pennywise = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        pennywise.bild.src = "./iconer/icons8-pennywise-50.png";
+
+        var r2d2 = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        r2d2.bild.src = "./iconer/icons8-r2-d2-50.png";
+
+        var sonic = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        sonic.bild.src = "./iconer/icons8-sonic-the-hedgehog-50.png";
+
+        var spiderman = {
+            x: Math.random() * 1600,
+            y: -200,
+            bild: new Image()
+        }
+        spiderman.bild.src = "./iconer/icons8-spider-man-head-50.png";
+
+        /* Ladda in bilderna */
+
+
+        /* ****************************** */
+        /*            Funktioner          */
+        /* ****************************** */
+
+        function ritaFigur(x, y) {
+            ctx.fillStyle = "pink";
+            ctx.fillRect(x, y, 50, 50);
+        }
+        function ritaCookieMonster() {
+            ctx.drawImage(cookieMonster.bild, cookieMonster.x, cookieMonster.y);
+        }
+        function ritaDarthVader() {
+            ctx.drawImage(darthVader.bild, darthVader.x, darthVader.y);
+        }
+        function ritaDarthstroke() {
+            ctx.drawImage(darthstroke.bild, darthstroke.x, darthstroke.y);
+        }
+        function ritaGroot() {
+            ctx.drawImage(groot.bild, groot.x, groot.y);
+        }
+        function ritaHarleyQuinn() {
+            ctx.drawImage(harleyQuinn.bild, harleyQuinn.x, harleyQuinn.y);
+        }
+        function ritaHomerSimp() {
+            ctx.drawImage(homerSimp.bild, homerSimp.x, homerSimp.y);
+        }
+        function ritaPennywise() {
+            ctx.drawImage(pennywise.bild, pennywise.x, pennywise.y);
+        }
+        function ritar2d2() {
+            ctx.drawImage(r2d2.bild, r2d2.x, r2d2.y);
+        }
+        function ritaSonic() {
+            ctx.drawImage(sonic.bild, sonic.x, sonic.y);
+        }
+        function ritaSpiderman() {
+            ctx.drawImage(spiderman.bild, spiderman.x, spiderman.y);
+        }
+
+        /* Animationsloopen */
+        function loopen() {
+            ctx.clearRect(0, 0, 1600, 1200);
+            cookieMonster.y++;
+            darthVader.y += 2;
+            darthstroke.y += 3;
+            groot.y += 4;
+            harleyQuinn.y += 5;
+            homerSimp.y += 6;
+            pennywise.y += 7;
+            sonic.y += 8;
+            spiderman.y += 9;
+            r2d2.y += 10;
+
+            ritaCookieMonster();
+            ritaDarthVader();
+            ritaDarthstroke();
+            ritaGroot();
+            ritaHarleyQuinn();
+            ritaHomerSimp();
+            ritaPennywise();
+            ritaSonic();
+            ritaSpiderman();
+            ritar2d2();
+
+            requestAnimationFrame(loopen);
+        }
+
+        /* ****************************** */
+        /*     Starta animationsloopen    */
+        /* ****************************** */
+        loopen();
+        
+    </script>
+</body>
+</html>
