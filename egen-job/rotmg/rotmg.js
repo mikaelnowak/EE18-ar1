@@ -11,7 +11,11 @@ var knight = new Image();
 knight.src = "./photos/Knight.png";
 
 //Position
-var knightX = 750, knightY = 400;
+//var knightX = 750, knightY = 400;
+var knight = {
+    x: 750,
+    y: 400
+}
 
 //Start
 loop();
@@ -43,4 +47,4 @@ window.addEventListener("keydown", function(e) {
             knightX -= 5;
             break;
     }
-});
+}); 

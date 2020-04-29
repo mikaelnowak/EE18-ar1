@@ -71,9 +71,9 @@ var ball = {
     x: eCanvas.width/2,
     y: player.y - ballSize,
     radius: ballSize,
-    speed: 3,
-    dx: 3,
-    dy: -3
+    speed: 10,
+    dx: 10,
+    dy: -10
 }
 
 //Design
@@ -98,17 +98,36 @@ function moveBall() {
 
 //Collision detection
 var life = 3;
+function ballWallCollision() {
+    if (ball.x + ball.radius > eCanvas.width || ball.x - ball.radius < 0) {
+        ball.dx = -ball.dx;
+}
+    if (ball.y - ball.radius < 0) {
+        ball.dy = -ball.dy;
+}
+    if (ball.y + ball.radius > eCanvas.height) {
+        life--;
+        resetBall();
+    }
+}
 
-if (ball.x + ball.radius > eCanvas.width || ball.x + ball.radius < 0) {
-    ball.dx = -ball.dx;
-}
-if (ball.y + ball.radius < 0) {
-    ball.dy = -ball.dy;
-}
-if (condition) {
-    
+function resetBall() {
+    ball.x = eCanvas.width/2;
+    ball.y = player.y - ballSize;
+    ball.dx = (Math.random() * 2 - 1) * 3;
+    ball.dy = -10;
 }
 
+//Collision with player
+function ballPlayerCollision() {
+    if (ball.y > player.y && ball.y < player.y + player.height && ball.x > player.x && ball.x < player.x + player.width) {
+        var collidePoint = ball.x - (player.x + player.width / 2);
+        collidePoint = collidePoint / (player.width / 2);
+        var angle = collidePoint * (Math.PI / 3);
+        ball.dx = ball.speed * Math.sin(angle);
+        ball.dy = -ball.speed * Math.cos(angle);
+    }
+}
 
 /* ************************************ */
 /*                 Loop                 */
@@ -121,6 +140,12 @@ function loop() {
 
     moveP1();
     moveBall();
+
+    ballPlayerCollision();
+
+    ballWallCollision();
+
+    //resetBall();
 
     requestAnimationFrame(loop);
 }
