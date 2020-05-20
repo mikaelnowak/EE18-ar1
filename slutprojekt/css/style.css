@@ -1,0 +1,43 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #888;
+    height: 250px;
+}
+header button {
+    display: block;
+}
+h1 {
+    margin-top: 37px;
+    text-align: center;
+    font-size: 90px;
+}
+nav {
+
+}
+nav ul {
+    margin: auto;
+    width: 378px;
+    background: #000;
+}
+nav ul li {
+    display: inline-block;
+    font-size: 30px;
+    padding: 10px 20px;
+}

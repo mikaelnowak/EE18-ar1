@@ -1,0 +1,30 @@
+//Left and right
+let left = false;
+let right = false;
+
+//Press down (move)
+document.addEventListener('keydown', function(e){
+    if (event.keyCode == 65) {
+        left = true;
+    } else if (event.keyCode == 68){
+        right = true;
+    }
+});
+
+//Not pressing (no move)
+document.addEventListener('keyup', function(e){
+    if (event.keyCode == 65) {
+        left = false;
+    } else if (event.keyCode == 68){
+        right = false;
+    }
+});
+
+//Collision detection
+function moveP1() {
+    if (right && player.x + player.width < eCanvas.width) {
+        player.x += player.dx;
+    } else if (left && player.x > 0) {
+        player.x -= player.dx;
+    }
+}

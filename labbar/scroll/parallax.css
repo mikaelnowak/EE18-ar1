@@ -1,0 +1,91 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.kontainer {
+    background: #DDD;
+}
+.ballons {
+    z-index: 1;
+}
+.ballons img:nth-child(1) {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+.ballons img:nth-child(2) {
+    position: absolute;
+    top: 800px;
+    left: 1000px;
+}
+.ballons img:nth-child(3) {
+    position: absolute;
+    top: 1600px;
+    left: 200px;
+}
+
+.back-clouds {
+    z-index: 0;
+}
+.back-clouds img:nth-child(1) {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+.back-clouds img:nth-child(2) {
+    position: absolute;
+    top: 400px;
+    left: 700px;
+}
+.back-clouds img:nth-child(3) {
+    position: absolute;
+    top: 670px;
+    left: -50px;
+}
+.back-clouds img:nth-child(4) {
+    position: absolute;
+    top: 1200px;
+    left: 1000px;
+}
+.back-clouds img:nth-child(5) {
+    position: absolute;
+    top: 1500px;
+    left: 1400px;
+}
+
+.mid-clouds {
+    z-index: 2;
+}
+.mid-clouds img:nth-child(1) {
+    position: absolute;
+    top: 170px;
+    left: 1000px;
+}
+.mid-clouds img:nth-child(2) {
+    position: absolute;
+    top: 700px;
+    left: 800px;
+}
+.mid-clouds img:nth-child(3) {
+    position: absolute;
+    top: 870px;
+    left: 1500px;
+}
+.mid-clouds img:nth-child(4) {
+    position: absolute;
+    top: 1200px;
+    left: 300px;
+}
+.mid-clouds img:nth-child(5) {
+    position: absolute;
+    top: 1600px;
+    left: -100px;
+}

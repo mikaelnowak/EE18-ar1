@@ -1,0 +1,89 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Canvas */
+html, body {
+    height: 100%;
+    background: #000;
+}
+.container {
+    height: 100%;
+}
+canvas {
+    width: 80%;
+    height: 100%;
+    cursor: crosshair;
+    background: #fff;
+}
+
+/* Tool bar */
+.tools {
+    background: #d1f1ff;
+    width: 20%;
+    height: 100%;
+    float: right;
+    padding: 20px;
+}
+.tools img {
+    width: 120px;
+    margin: 45px 24px 25px 24px;
+    cursor: pointer;
+}
+.tools h1 {
+    margin-top: 10px;
+    background: #fff;
+    width: auto;
+    border-radius: 5px;
+}
+.tools .slider {
+    width: 100%;
+    margin-top: 10px;
+}
+.tools .rect {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 20px 7px 0px 7px;
+}
+.tools input {
+    margin-top: 10px;
+}
+.tools .reset {
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* Color */
+.black {
+    background: #000;
+}
+.red {
+    background: #f00;
+}
+.green {
+    background: #0f0;
+}
+.blue {
+    background: #00f;
+}
+.gray {
+    background: #888;
+}
+.yellow {
+    background: #ff0;
+}

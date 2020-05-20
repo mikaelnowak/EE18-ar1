@@ -1,0 +1,61 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Background style */
+body {
+    background: #000;
+    color: #fff;
+}
+.container {
+    background: #aaa;
+}
+
+/* Canvas style */
+canvas {
+    display: inline-block;
+    width: 1000px;
+    height: 700px;
+}
+
+/* Right side style */
+
+.rightside {
+    background: #888;
+    width: 340px;
+    padding: 10px;
+    border: 3px solid #0ecef0;
+    border-radius: 5px;
+    float: right;
+    margin: 150px 50px 0 0;
+}
+.rightside p {
+    font-size: 40px;
+    margin: 50px;
+}
+.rightside .keybind {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 200px;
+}
+.rightside .keybind label {
+    font-size: 40px;
+}
+.rightside .keybind input {
+    font-size: 40px;
+    width: 150px;
+    text-align: center;
+}
+.rightside button {
+    margin-top: 20px;
+    width: auto;
+    font-size: 26px;
+}

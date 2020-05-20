@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>html</title>
+    <link rel="stylesheet" href="curser.css">
+</head>
+<body>
+    <input type="text">
+    <button></button>
+    <canvas></canvas>
+    <script>
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        const eCanvas = document.querySelector('canvas');
+
+        var ctx = canvas.getContext('2d');
+        eCanvas.width = 300;
+        eCanvas.height = 200;
+
+        var mouseX, mouseY;
+
+        canvas.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            //mouseX = e.clientX;
+            //mouseY = e.clientY;
+            //console.log(mouseX, mouseY, mouseX2, mouseY2);
+
+        });
+        //Pressing down
+        eCanvas.addEventListener('mousedown', function() {
+            down = true;
+        });
+        //Relice
+        eCanvas.addEventListener('mouseup', function() {
+            down = false;
+        });
+
+        //Draw funcction
+        function draw() {
+            //If mouse button 1 och 2 is pressed down
+            if (down == true) {
+                ctx.moveTo(mouseX, mouseY);
+                ctx.fillStyle = "#" + color;
+                ctx.arc(mouseX, mouseY, thickness, 0 * Math.PI, 2 * Math.PI);
+                ctx.fill();
+                //console.log(ctx.fillStyle);
+            }
+        }
+
+        function loop() {
+            draw();
+
+            requestAnimationFrame(loop);
+        }
+
+        loop();
+    </script>
+</body>
+</html>

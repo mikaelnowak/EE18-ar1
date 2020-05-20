@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space Invaders</title>
+    <link rel="stylesheet" href="../css/space-inv.css">
+</head>
+<body>
+    <div class="container">
+        <canvas></canvas>
+        <div class="rightside">
+            <p id="life">LIFE: 3</p>
+            <p id="score">SCORE: 0</p>
+            <div class="bindings">
+                <div class="keybind">
+                    <label>LEFT</label>
+                    <input id="leftkey" placeholder="A" maxlength="1">
+                    <label>RIGHT</label>
+                    <input id="rightkey" placeholder="D" maxlength="1">
+                    <label>SHOT</label>
+                    <input id="shotkey" placeholder="SPACE" maxlength="1">
+                </div>
+                <button id="rebind">Rebind</button>
+                <button id="deafult">Deafult bindings</button>
+            </div>
+        </div>
+    </div>
+    <script src="../jsfiles/space-inv.js"></script>
+</body>
+</html>

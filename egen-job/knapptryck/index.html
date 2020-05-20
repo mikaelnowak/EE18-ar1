@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knapptryck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="text" maxlength="1">
+    <button>byt</button>
+    <script>
+        //Element
+        const eInput = document.querySelector('input');
+        const eKnapp = document.querySelector('button');
+
+        //Variables
+        var symbols, color, keycode;
+
+        //First color selection
+        randomColor();
+
+        //Random color generator
+        function randomColor() {
+            symbols = "0123456789ABCDEF";
+            color = "#";
+
+            //Generate all 6 symbols
+            for (let i = 0; i < 6; i++) {
+                color += symbols[Math.floor(Math.random() * 16)];
+            };
+        };
+
+        //Press to generate new color
+        document.addEventListener('keydown', function() {
+            if (event.keyCode == keycode) {
+                document.body.style.background = color;
+                randomColor()
+            };
+        });
+
+        //Change key
+        eKnapp.addEventListener('click', function() {
+            //Get wanted key
+            var keyName = eInput.value.toUpperCase();
+            keycode = keyName.codePointAt(0);
+            console.log(keyName);
+        });
+
+
+    </script>
+</body>
+</html>

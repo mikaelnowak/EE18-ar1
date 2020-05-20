@@ -1,0 +1,31 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('./bg.jpg');
+}
+canvas {
+    width: 800px;
+    height: 950px;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 10px #000;
+    background: #333;
+    display: block;
+    margin: 10px auto 0 auto;
+    display: inline-block;
+}
+.keybinding {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+    width: ;
+}
