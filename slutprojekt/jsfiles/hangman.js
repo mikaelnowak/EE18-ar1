@@ -5,9 +5,14 @@ eCanvas.width = 700;
 eCanvas.height = 700;
 
 //Element
-const eLetters = document.querySelector('.interaction');
+const eLetters = document.querySelector('.letters');
+const eContinent = document.querySelector('select');
 
+//Global varibles
 
+/* ********************* */
+/*       Continent       */
+/* ********************* */
 //Countrys (arrays)
 var europe = [
     "Albanien",
@@ -205,14 +210,17 @@ var afrika = [
 var world = europe.concat(asia, ociania, naca, sa, afrika);
 //console.log(world);
 
-/* ************************ */
-/*          Letter          */
-/* ************************ */
+//Selected continent
+
+
+/* ********************* */
+/*        Letters        */
+/* ********************* */
+//Know wich button pressed
 eLetters.addEventListener('click', function(event) {
-    if (event.target.tagName == 'BUTTON') {
+    if (event.target.tagName) {
         console.log(event.target.textContent);
 
-        //Individual letters
         switch (event.target.textContent) {
             case "A":
                 
@@ -295,10 +303,3 @@ eLetters.addEventListener('click', function(event) {
         }
     }
 });
-
-
-/* var index = Math.floor(Math.random() * stader.length);
-console.log(index);
-//Ta ut staden
-var slumpadStad = stader[index];
-console.log(slumpadStad); */

@@ -10,34 +10,39 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     padding: 0;
 }
 
+/* Background style */
 body {
     background: #000;
     color: #fff;
 }
 
-/* Header */
+/* Header style */
 header {
     background: #888;
     height: 250px;
 }
-header button {
-    display: block;
-}
-h1 {
+header h1 {
     margin-top: 37px;
     text-align: center;
     font-size: 90px;
 }
-nav {
-
-}
-nav ul {
+header nav {
     margin: auto;
-    width: 378px;
     background: #000;
+    width: 378px;
+    width: fit-content;
 }
-nav ul li {
+header nav ul li {
     display: inline-block;
     font-size: 30px;
     padding: 10px 20px;
+}
+
+/* Content section style */
+.content {
+    width: 70%;
+    margin: auto;
+    padding: 100px;
+    font-size: 1.5em;
+    background: #444;
 }

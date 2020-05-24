@@ -15,7 +15,7 @@ const eSelect = document.querySelector('button');
 const eReset = document.querySelector('.reset');
 
 //Global variable
-var mouseX, mouseY, mouseX2, mouseY2, down = false, fillColor = "000000", thickness = 5, fillColorSave = "000000";
+var mouseX, mouseY, mouseX2, mouseY2, down = false, fillColor = "000", thickness = 5, fillColorSave = "000";
 
 /* ******************* */
 /*        Mouse        */
@@ -71,7 +71,7 @@ ePen.addEventListener('click', function() {
 
 //Eraser
 eEraser.addEventListener('click', function() {
-    fillColor = "ffffff";
+    fillColor = "fff";
 });
 
 //Pen/Eraser thickness
@@ -82,8 +82,35 @@ eSlider.addEventListener('mouseup', function() {
 
 //Ready colors
 eColor.addEventListener('click', function(event) {
-    if (event.target.background == 'BUTTON') {
-        console.log(event.target.background);
+    if (event.target.className) {
+        console.log(event.target.className);
+        
+        switch (event.target.className) {
+            case "rect black":
+                fillColor = "000";
+                fillColorSave = fillColor;
+                break;
+            case "rect red":
+                fillColor = "f00";
+                fillColorSave = fillColor;
+                break;
+            case "rect green":
+                fillColor = "0f0";
+                fillColorSave = fillColor;
+                break;
+            case "rect blue":
+                fillColor = "00f";
+                fillColorSave = fillColor;
+                break;
+            case "rect gray":
+                fillColor = "888";
+                fillColorSave = fillColor;
+                break;
+            case "rect yellow":
+                fillColor = "ff0";
+                fillColorSave = fillColor;
+                break;
+        }
     }
 });
 
