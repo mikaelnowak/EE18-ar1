@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>asd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+var guessCountry = "h____";
+var newGuessCountry = "_e___";
+
+document.addEventListener('click', function() {
+    for (var a = 0; a < guessCountry.length; a++) {
+    if (guessCountry[a] == "_") {
+        guessCountry[a] = newGuessCountry[a];
+    } else {
+        incorrect = false;
+    }
+}
+console.log(guessCountry);
+});
+    </script>
+</body>
+</html>

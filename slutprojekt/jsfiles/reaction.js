@@ -7,21 +7,23 @@ eCanvas.height = 500;
 //Elements
 
 
+//Variables
+var bgc = "#177ed3";
+
 //Click on canvas
-eCanvasBlue.addEventListener('click', function() {
+eCanvas.addEventListener('click', function() {
     //Variables
 
     //Random wait time generator
-    var secunds = Math.ceil(Math.random() * 3) + 1;
-    var waitTime = Math.random() + 1 * secunds;
-    console.log(waitTime);
+    var waitTime = Math.floor(Math.random() * 3000) + 2000;
+    //console.log(waitTime);
 
-    var bgc = "#177ed3";
     //When the background is a sertent color
-    if (bgc == "#177ed3") {
-        bgc = "#f00";
+    if (bgc == '#177ed3') {
+        bgc = '#f00';
         eCanvas.style.background = bgc;
-        //console.log(bgc);
-        
+        setTimeout('eCanvas.style.background = "#0f0"', waitTime);
+    } if (bgc == '#f00') {
+        console.log("hej");
     }
 });

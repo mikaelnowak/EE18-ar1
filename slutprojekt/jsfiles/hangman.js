@@ -5,16 +5,19 @@ eCanvas.width = 700;
 eCanvas.height = 700;
 
 //Element
-const eLetters = document.querySelector('.letters');
+const eOutput = document.querySelector('input');
 const eContinent = document.querySelector('select');
+const eButton = document.querySelector('button');
+const eLetters = document.querySelector('.letters');
 
 //Global varibles
+var selected, country = "", guessCountry;
 
-/* ********************* */
-/*       Continent       */
-/* ********************* */
+/* ********************** */
+/* Continent and countrys */
+/* ********************** */
 //Countrys (arrays)
-var europe = [
+var eu = [
     "Albanien",
     "Austria",
     "Belgium",
@@ -44,7 +47,7 @@ var europe = [
     "Spain",
     "Sweden"
 ];
-var asia = [
+var as = [
     "Afghanistan",
     "Armenia",
     "Azerbaijan",
@@ -96,7 +99,7 @@ var asia = [
     "Vietnam",
     "Yemen"
 ];
-var ociania = [
+var oc = [
     "Australia",
     "Fiji",
     "Kiribati",
@@ -151,7 +154,7 @@ var sa = [
     "Uruguay",
     "Venezuela"
 ];
-var afrika = [
+var af = [
     "Algeria",
     "Angola",
     "Benin",
@@ -207,99 +210,165 @@ var afrika = [
     "Zambia",
     "Zimbabwe"
 ];
-var world = europe.concat(asia, ociania, naca, sa, afrika);
+var world = eu.concat(as, oc, naca, sa, af);
 //console.log(world);
 
 //Selected continent
+eButton.addEventListener('click', function() {
+    //console.log(eContinent.value);
+    switch (eContinent.value) {
+        case "eu":
+            selected = eu;
+            break;
+        case "as":
+            selected = as;
+            break;
+        case "af":
+            selected = af;
+            break;
+        case "oc":
+            selected = oc;
+            break;
+        case "naca":
+            selected = naca;
+            break;
+        case "sa":
+            selected = sa;
+            break;
+        case "world":
+            selected = world;
+            break;
+    }
+    //console.log(selected);
 
+    //Random country selection
+    country = selected[Math.floor(Math.random() * selected.length)];
+    //console.log(selected);
 
-/* ********************* */
-/*        Letters        */
-/* ********************* */
+    //Reset guessCountry
+    guessCountry = "";
+
+    //Generate all "_ "
+    for (var i = 0; i < country.length; i++) {
+        guessCountry += "_";
+    }
+    //console.log(country, guessCountry);
+    eOutput.value = guessCountry;
+});
+
+/* ********************** */
+/*         Letters        */
+/* ********************** */
 //Know wich button pressed
 eLetters.addEventListener('click', function(event) {
-    if (event.target.tagName) {
-        console.log(event.target.textContent);
+    var guess, incorrect = true, newGuessCountry = "";
 
-        switch (event.target.textContent) {
-            case "A":
-                
-                break;
-            case "B":
-                
-                break;
-            case "C":
-                
-                break;
-            case "D":
-                
-                break;
-            case "E":
-                
-                break;
-            case "F":
-                
-                break;
-            case "G":
-                
-                break;
-            case "H":
-                
-                break;
-            case "I":
-                
-                break;
-            case "J":
-                
-                break;
-            case "K":
-                
-                break;
-            case "L":
-                
-                break;
-            case "M":
-                
-                break;
-            case "N":
-                
-                break;
-            case "O":
-                
-                break;
-            case "P":
-                
-                break;
-            case "Q":
-                
-                break;
-            case "R":
-                
-                break;
-            case "S":
-                
-                break;
-            case "T":
-                
-                break;
-            case "U":
-                
-                break;
-            case "V":
-                
-                break;
-            case "W":
-                
-                break;
-            case "X":
-                
-                break;
-            case "Y":
-                
-                break;
-            case "Z":
-                
-                break;
+    //All keys
+    switch (event.target.textContent) {
+        case "A":
+            guess = "A";
+            break;
+        case "B":
+            guess = "B";
+            break;
+        case "C":
+            guess = "C";
+            break;
+        case "D":
+            guess = "D";
+            break;
+        case "E":
+            guess = "E";
+            break;
+        case "F":
+            guess = "F";
+            break;
+        case "G":
+            guess = "G";
+            break;
+        case "H":
+            guess = "H";
+            break;
+        case "I":
+            guess = "I";
+            break;
+        case "J":
+            guess = "J";
+            break;
+        case "K":
+            guess = "K";
+            break;
+        case "L":
+            guess = "L";
+            break;
+        case "M":
+            guess = "M";
+            break;
+        case "N":
+            guess = "N";
+            break;
+        case "O":
+            guess = "O";
+            break;
+        case "P":
+            guess = "P";
+            break;
+        case "Q":
+            guess = "Q";
+            break;
+        case "R":
+            guess = "R";
+            break;
+        case "S":
+            guess = "S";
+            break;
+        case "T":
+            guess = "T";
+            break;
+        case "U":
+            guess = "U";
+            break;
+        case "V":
+            guess = "V";
+            break;
+        case "W":
+            guess = "W";
+            break;
+        case "X":
+            guess = "X";
+            break;
+        case "Y":
+            guess = "Y";
+            break;
+        case "Z":
+            guess = "Z";
+            break;
+    }
+    //console.log(country);
+
+    //Compair guessed letter
+    for (var i = 0; i < country.length; i++) {
+        console.log(i, country[i]);
+        var letter = country[i].toUpperCase();
+
+        //Controll if guess is a letter in the country
+        if (guess == letter) {
+            newGuessCountry += country[i];
+        } else {
+            newGuessCountry += "_";
         }
     }
+    console.log(newGuessCountry);
+    
+
+    for (var a = 0; a < country.length; a++) {
+        if (guessCountry[a] == "_") {
+            guessCountry[a] = newGuessCountry[a];
+        } else {
+            incorrect = false;
+        }
+    }
+    eOutput.value = guessCountry;
+    console.log(guessCountry);
+    
 });
