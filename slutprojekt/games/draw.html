@@ -9,24 +9,25 @@
 <body>
     <div class="container">
         <canvas></canvas>
+        <!-- The toolbar -->
         <div class="tools">
-            <img id="pen" src="../pictures/axel-orten.png" alt="Pen">
-            <img id="eraser" src="../pictures/axel-orten.png" alt="Eraser">
+            <img id="pen" src="../pictures/pen.png" alt="Pen">
+            <img id="eraser" src="../pictures/eraser.png" alt="Eraser">
             <h1>Thickness</h1>
             <input class="slider" type="range" min="1" max="100" value="5">
             <h1>Color</h1>
             <div id="color">
-                <div class="rect black"></div>
-                <div class="rect red"></div>
-                <div class="rect green"></div>
-                <div class="rect blue"></div>
-                <div class="rect gray"></div>
-                <div class="rect yellow"></div>
+                <div class="circle black"></div>
+                <div class="circle red"></div>
+                <div class="circle green"></div>
+                <div class="circle blue"></div>
+                <div class="circle gray"></div>
+                <div class="circle yellow"></div>
             </div>
             <h1>Own color</h1>
-            <label>#:</label>
-            <input id="owncolor" type="text">
-            <button>Select</button>
+            <input id="owncolor" type="text" placeholder="Ex f00, ff0000 or ff0000ff">
+            <button id="select">Select</button>
+            <div class="circle own"></div>
             <button class="reset">Reset</button>
         </div>
     </div>  

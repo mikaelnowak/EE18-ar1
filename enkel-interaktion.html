@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enkel interaktion</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Spamskydd</h1>
+        <h2>Input</h2>
+        <label for="fråga">...</label>
+        <input id="fråga" type="text">
+        <button>Skicka</button>
+        <h2>Output</h2>
+        <p>Resultat</p>
+    </div>
+    <script>
+        /**
+         * Exempel på enkel interaktion med användaren
+         * 1. Läser av användarens input
+         * 2. Någon sorts algoritm som reagerar på input
+         * 3. Presenterar ett svar
+         * 4. Eller ett felmeddelande om användaren skrivit in fel
+         */
+
+        const elementTal = document.querySelector("input");
+        const elementLabel = document.querySelector("label");
+        const elementP = document.querySelector("p");
+        const elementButton = document.querySelector("button");
+
+        /* Slumpa fram två tal 1-10 */
+        var slumptal1 = Math.ceil(Math.random() * 10);
+        var slumptal2 = Math.ceil(Math.random() * 10);
+
+        /* Räkna ut summan = tal1 + tal2*/
+        var summa = slumptal1 + slumptal2;
+
+        /* Skriv ut fråga */
+        elementLabel.textContent = "Vad är " + slumptal1 + "+" + slumptal2 + "?";
+
+        elementButton.addEventListener("click", gissa);
+        function gissa() {
+            var gissning = elementTal.value;
+
+            /*Är gissning = summa ? */
+            if (gissning == summa) {
+                /* Rätt svar! */
+                elementP.textContent = "Rätt Svar!";
+            } else {
+                /* Fel Svar! */
+                elementP.textContent = "Fel Svar!";
+            }
+
+        }
+    </script>
+</body>
+</html>

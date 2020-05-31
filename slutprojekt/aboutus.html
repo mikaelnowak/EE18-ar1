@@ -9,7 +9,6 @@
 <body>
     <!-- The websides head -->
     <header>
-        <button>Black/White</button>
         <h1>GameStation</h1>
         <nav>
             <ul>
@@ -20,50 +19,47 @@
         </nav>
     </header>
     <!-- The different content for the webbsite -->
-    <div class="content">
-        <div class="aboutusbox">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorem nesciunt, dignissimos ea est, consequuntur, omnis praesentium doloremque officiis ipsam ducimus ratione libero! Error culpa perferendis temporibus accusantium velit consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus reiciendis eveniet aliquam vel inventore expedita quibusdam, dolorum deserunt tenetur maxime ut dolores sit perspiciatis? Doloribus, dolorum vel. Deserunt, illum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisci laudantium, illum repellat fugit unde officiis iure deleniti! Aperiam, doloribus. Nulla dignissimos quas itaque maiores voluptatibus facilis sapiente fuga ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorem nesciunt, dignissimos ea est, consequuntur, omnis praesentium doloremque officiis ipsam ducimus ratione libero! Error culpa perferendis temporibus accusantium velit consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus reiciendis eveniet aliquam vel inventore expedita quibusdam, dolorum deserunt tenetur maxime ut dolores sit perspiciatis? Doloribus, dolorum vel. Deserunt, illum. Lorem ipsum dolor.</p>
-            <fieldset>
-                <legend>Any questions</legend>
-                <label>Email</label>
-                <input type="email">
-                <label>Your question</label>
-                <textarea name="question" cols="30" rows="10" placeholder="Write your question here."></textarea>
-                <button id="submit">Submit</button>
-            </fieldset>
-            <div class="errer">
-
-            </div>
-        </div>
+    <div class="mainpart aboutusbox">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorem nesciunt, dignissimos ea est, consequuntur, omnis praesentium doloremque officiis ipsam ducimus ratione libero! Error culpa perferendis temporibus accusantium velit consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus reiciendis eveniet aliquam vel inventore expedita quibusdam, dolorum deserunt tenetur maxime ut dolores sit perspiciatis? Doloribus, dolorum vel. Deserunt, illum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur adipisci laudantium, illum repellat fugit unde officiis iure deleniti! Aperiam, doloribus. Nulla dignissimos quas itaque maiores voluptatibus facilis sapiente fuga ipsa. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolorem nesciunt, dignissimos ea est, consequuntur, omnis praesentium doloremque officiis ipsam ducimus ratione libero! Error culpa perferendis temporibus accusantium velit consequatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro doloribus reiciendis eveniet aliquam vel inventore expedita quibusdam, dolorum deserunt tenetur maxime ut dolores sit perspiciatis? Doloribus, dolorum vel. Deserunt, illum. Lorem ipsum dolor.</p>
+        <fieldset>
+            <legend>Any questions</legend>
+            <label id="email">Email</label>
+            <input type="email">
+            <label id="question">Your question</label>
+            <textarea name="question" cols="30" rows="10"></textarea>
+            <button id="submit">Submit</button>
+        </fieldset>
     </div>
     <!-- The websides foot -->
     <footer>
-        <img src="./pictures/gs-loggo-50px.png" alt="GameStation logo">
-        <ul>
-            <li>Contact us:</li>
-            <li>Mobile number - 123 456 78 90</li>
-            <li>E-mail address - not.a@real.email</li>
-        </ul>
-        <ul>
-            <li>Explore:</li>
-            <li>Start</li>
-            <li>Games</li>
-            <li>About us</li>
-        </ul>
-        <ul>
-            <li>Follow us</li>
-            <li>Instagram <img src="#" alt="Instagrams logo"></li>
-            <li>Facebook <img src="#" alt="Facebooks logo"></li>
-            <li>Twitter <img src="#" alt="Twitters logo"></li>
-            <li>Linkedin <img src="#" alt="Linkedins logo"></li>
-        </ul>
-        <ul>
-            <li>Legal</li>
-            <li>Terms</li>
-            <li>Privacy</li>
-        </ul>
+        <div class="footcontent">
+            <img class="logo" src="./pictures/gamestation-logo-200px.png" alt="GameStation logo">
+            <ul id="footul1">
+                <li class="topli">Contact us &darr;</li>
+                <li>Mobile number - 123 456 78 90</li>
+                <li>E-mail address - not.a@real.email</li>
+            </ul>
+            <ul id="footul2">
+                <li class="topli">Explore &darr;</li>
+                <li>Start</li>
+                <li>Games</li>
+                <li>About us</li>
+            </ul>
+            <ul id="footul3">
+                <li class="topli">Follow us &darr;</li>
+                <li>Instagram <img src="./pictures/instagram-icon.png" alt="Instagrams logo"></li>
+                <li>Facebook <img src="./pictures/facebook-logo.webp" alt="Facebooks logo"></li>
+                <li>Twitter <img src="./pictures/twitter-icon.webp" alt="Twitters logo"></li>
+                <li>Linkedin <img src="./pictures/linkedin-icon.webp" alt="Linkedins logo"></li>
+            </ul>
+            <ul id="footul4">
+                <li class="topli">Legal &darr;</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
     </footer>
-    <script src="./jsfiles/index.js"></script>
+    <script defer src="./jsfiles/index.js"></script>
 </body>
 </html>

@@ -9,7 +9,6 @@
 <body>
     <!-- The websides head -->
     <header>
-        <button>Black/White</button>
         <h1>GameStation</h1>
         <nav>
             <ul>
@@ -20,43 +19,44 @@
         </nav>
     </header>
     <!-- The different content for the webbsite -->
-    <div class="content">
+    <div class="mainpart">
         <div class="gamesbox">
-            <a href="#"><img src="#" alt="#">Human benchmark</a>
-            <a href="#"><img src="#" alt="#">Draw</a>
-            <a href="#"><img src="#" alt="#">Hangman</a>
-            <a href="#"><img src="#" alt="#">Space invaders</a>
-            <p>Comming soon</p>
-            <img src="#" alt="#">
+            <a id="drawgame" href="./games/draw.html"><img src="./pictures/draw-icon-200px.png" alt="Draw icon">Draw</a>
+            <a id="hangmangame" href="./games/hangman.html"><img src="./pictures/hangman-icon-200px.png" alt="Hangman icon">Hangman</a>
+            <div class="commingsoon">
+                <img src="./pictures/comming-soon-200px.png" alt="Comming soon">
+                <p>Comming soon</p>
+            </div>
         </div>
     </div>
     <!-- The websides foot -->
     <footer>
-        <img src="./pictures/gs-loggo-50px.png" alt="GameStation logo">
-        <ul>
-            <li>Contact us:</li>
-            <li>Mobile number - 123 456 78 90</li>
-            <li>E-mail address - not.a@real.email</li>
-        </ul>
-        <ul>
-            <li>Explore:</li>
-            <li>Start</li>
-            <li>Games</li>
-            <li>About us</li>
-        </ul>
-        <ul>
-            <li>Follow us</li>
-            <li>Instagram <img src="#" alt="Instagrams logo"></li>
-            <li>Facebook <img src="#" alt="Facebooks logo"></li>
-            <li>Twitter <img src="#" alt="Twitters logo"></li>
-            <li>Linkedin <img src="#" alt="Linkedins logo"></li>
-        </ul>
-        <ul>
-            <li>Legal</li>
-            <li>Terms</li>
-            <li>Privacy</li>
-        </ul>
+        <div class="footcontent">
+            <img class="logo" src="./pictures/gamestation-logo-200px.png" alt="GameStation logo">
+            <ul id="footul1">
+                <li class="topli">Contact us &darr;</li>
+                <li>Mobile number - 123 456 78 90</li>
+                <li>E-mail address - not.a@real.email</li>
+            </ul>
+            <ul id="footul2">
+                <li class="topli">Explore &darr;</li>
+                <li>Start</li>
+                <li>Games</li>
+                <li>About us</li>
+            </ul>
+            <ul id="footul3">
+                <li class="topli">Follow us &darr;</li>
+                <li>Instagram <img src="./pictures/instagram-icon.png" alt="Instagrams logo"></li>
+                <li>Facebook <img src="./pictures/facebook-logo.webp" alt="Facebooks logo"></li>
+                <li>Twitter <img src="./pictures/twitter-icon.webp" alt="Twitters logo"></li>
+                <li>Linkedin <img src="./pictures/linkedin-icon.webp" alt="Linkedins logo"></li>
+            </ul>
+            <ul id="footul4">
+                <li class="topli">Legal &darr;</li>
+                <li>Terms</li>
+                <li>Privacy</li>
+            </ul>
+        </div>
     </footer>
-    <script src="./jsfiles/index.js"></script>
 </body>
 </html>

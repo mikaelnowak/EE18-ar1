@@ -11,7 +11,8 @@ const eEraser = document.querySelector('#eraser');
 const eSlider = document.querySelector('.slider');
 const eColor = document.querySelector('#color');
 const eOwnColor = document.querySelector('#owncolor');
-const eSelect = document.querySelector('button');
+const eOwnColorShow = document.querySelector('.own');
+const eSelect = document.querySelector('#select');
 const eReset = document.querySelector('.reset');
 
 //Global variable
@@ -86,27 +87,27 @@ eColor.addEventListener('click', function(event) {
         console.log(event.target.className);
         
         switch (event.target.className) {
-            case "rect black":
+            case "circle black":
                 fillColor = "000";
                 fillColorSave = fillColor;
                 break;
-            case "rect red":
+            case "circle red":
                 fillColor = "f00";
                 fillColorSave = fillColor;
                 break;
-            case "rect green":
+            case "circle green":
                 fillColor = "0f0";
                 fillColorSave = fillColor;
                 break;
-            case "rect blue":
+            case "circle blue":
                 fillColor = "00f";
                 fillColorSave = fillColor;
                 break;
-            case "rect gray":
+            case "circle gray":
                 fillColor = "888";
                 fillColorSave = fillColor;
                 break;
-            case "rect yellow":
+            case "circle yellow":
                 fillColor = "ff0";
                 fillColorSave = fillColor;
                 break;
@@ -117,6 +118,7 @@ eColor.addEventListener('click', function(event) {
 //Select your own color
 eSelect.addEventListener('click', function() {
     fillColor = eOwnColor.value;
+    eOwnColorShow.style.background = "#" + fillColor;
     //Save color for pen
     fillColorSave = fillColor;
     //console.log(fillColor);

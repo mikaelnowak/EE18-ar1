@@ -12,7 +12,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 
 /* Background style */
 body {
-    background: #000;
+    background: #444;
 }
 .container {
     width: 100%;
@@ -25,44 +25,71 @@ body {
     margin: auto;
     width: 700px;
     height: 700px;
-    background: #fff;
+    background: linear-gradient(0deg, #dd0 0%, #af39a7 100%);
 }
 
 /* Interaction style */
 .container .continent {
-    width: 420px;
+    width: 500px;
     margin: 25px auto;
 }
 .container .continent input {
     font-family: monospace;
-    width: 420px;
+    font-size: 18px;
+    width: 500px;
+    border: none;
     margin-bottom: 10px;
     text-align: center;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 .container .continent select {
     font-family: monospace;
     display: inline-block;
-    margin-left: 73px;
-}
-.container .continent button {
+    margin-left: 118px;
+    
 }
 .container .letters {
-    background: #fff;
+    background: #888;
     width: 500px;
     margin: 5px auto;
+    border-radius: 5px;
 }
 .container .letters button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 6px;
-    background: linear-gradient(90deg, #7a7a7a 0%, #b9b9b9 100%);
+    background: #bebebe;
+    border-radius: 5px;
     width: 40px;
     height: 40px;
     font-size: 20px;
+    border: none;
 }
 .container .letters .bottomletters {
     margin: 6px 9px;
 }
 .container .letters .firstlastrow {
     margin-left: 12px;
+}
+
+/* Less then 700px screen style */
+.smallscreen {
+    display: none;
+}
+.smallscreen h1 {
+    color: red;
+    margin: 200px auto;
+    width: 400px;
+    vertical-align: middle;
+}
+
+
+
+/* Responsive */
+@media (max-width: 720px) {
+    .container {
+        display: none;
+    }
+    .smallscreen {
+        display: block;
+    }
 }

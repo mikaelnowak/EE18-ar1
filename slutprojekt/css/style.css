@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@600&family=Righteous&display=swap');
+
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -12,37 +14,342 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 
 /* Background style */
 body {
-    background: #000;
+    background: url(../pictures/gamesstation-background-300px-symetry.png);
     color: #fff;
+    font-family: 'Assistant', sans-serif;
 }
 
 /* Header style */
 header {
-    background: #888;
+    background: linear-gradient(313deg, #f00 0%, #700 4%, #400 8%, #400 92%, #700 96%, #f00 100%);
+    width: 100%;
     height: 250px;
+    color: #f00;
+    padding-top: 30px;
 }
 header h1 {
-    margin-top: 37px;
+    font-family: 'Righteous', cursive;
     text-align: center;
     font-size: 90px;
+    text-shadow: 5px 5px #000;
 }
 header nav {
     margin: auto;
     background: #000;
     width: 378px;
     width: fit-content;
+    padding: 10px 50px;
+    border-radius: 25px;
 }
 header nav ul li {
     display: inline-block;
     font-size: 30px;
-    padding: 10px 20px;
+    padding: 0 20px;
+}
+header nav ul .pressed {
+    color: #400;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #f00;
+    transition-duration: 1s;
+}
+header nav ul li a:hover {
+    text-shadow: 0 0 10px #ff0000;
 }
 
-/* Content section style */
-.content {
+/* Content style for all sited */
+.mainpart {
     width: 70%;
     margin: auto;
     padding: 100px;
     font-size: 1.5em;
-    background: #444;
+}
+p {
+    background: #400;
+    color: #f00;
+    padding: 10px;
+    border: 10px double #700;
+    border-radius: 10px;
+}
+
+/* Start site style (index.html) */
+.startbox {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 30px;
+    grid-template-areas: 
+    "p1 p1 photo1"
+    "photo2 p2 p2"
+    "p3 p3 p3";
+}
+.startbox img {
+    display: flex;
+    align-self: center;
+}
+
+#paragraph1 {
+    grid-area: p1;
+}
+#photo1 {
+    grid-area: photo1;
+    margin-left: auto;
+}
+#paragraph2 {
+    grid-area: p2;
+}
+#photo2 {
+    grid-area: photo2;
+}
+#paragraph3 {
+    grid-area: p3;
+}
+
+/* Games site style (games.html) */
+.gamesbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    grid-template-areas:
+    "draw hangman"
+    "commingsoon commingsoon";
+    background: #400;
+    padding: 10px;
+    border: 10px double #700;
+    border-radius: 10px;
+}
+.gamesbox a {
+    display: block;
+    text-decoration: none;
+    color: #f00;
+    margin: auto;
+    text-align: center;
+}
+.gamesbox img {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+.gamesbox .commingsoon {
+    display: block;
+    margin: auto;
+    grid-area: commingsoon;
+}
+.gamesbox .commingsoon img {
+    filter: grayscale(100%);
+}
+.gamesbox .commingsoon p {
+    border: none;
+    text-align: center;
+    padding-top: 0;
+}
+
+#drawgame {
+    grid-area: draw;
+}
+#hangmangame {
+    grid-area: hangman;
+}
+
+
+/* About us site style (aboutus.html) */
+.aboutusbox p {
+    margin-bottom: 30px;
+}
+.aboutusbox fieldset {
+    background: #400;
+    border: 5px solid #700;
+    border-radius: 5px;
+    color: #f00;
+}
+.aboutusbox fieldset legend {
+    background: #400;
+    border: 5px solid #700;
+}
+.aboutusbox fieldset #email {
+    margin-top: 10px;
+}
+.aboutusbox fieldset input {
+    color: #400;
+    background: #700;
+    border: none;
+}
+.aboutusbox fieldset #question {
+    display: block;
+    margin-top: 10px;
+}
+.aboutusbox fieldset textarea {
+    width: 100%;
+    color: #400;
+    background: #700;
+    border: none;
+}
+.aboutusbox fieldset #submit {
+    display: block;
+    background: #400;
+    border: 2px solid #700;
+    border-radius: 5px;
+    color: #f00;
+}
+
+.sent p {
+    background: none;
+    border: none;
+    color: #040;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+.sent fieldset {
+    margin-top: 10px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background: #0f0;
+}
+.error p {
+    margin-bottom: 0;
+    background: none;
+    border: none;
+    color: #400;
+    font-size: 0.8em;
+}
+.error fieldset {
+    margin-top: 10px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    background: #f00;
+}
+
+
+/* Footer style */
+footer {
+    background: linear-gradient(313deg, #f00 0%, #700 6%, #400 12%, #400 88%, #700 94%, #f00 100%);
+    height: auto;
+    width: auto;
+}
+footer .footcontent {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "logo ul1 ul2 ul3 ul4";
+}
+footer .footcontent .logo {
+    display: inline-block;
+    margin: auto;
+    grid-area: logo;
+}
+footer .footcontent ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 30px 20px 20px 0;
+}
+footer .footcontent ul li {
+    margin-top: 10px;
+    color: rgb(128, 0, 0);
+}
+footer .footcontent ul .topli {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+footer .footcontent ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Responsive */
+@media (min-width: 1930px) {
+    .content .mainpart {
+        width: 1330px;
+        margin: auto;
+    }
+    footer .footcontent {
+        width: 1920px;
+        margin: auto;
+    }
+}
+@media (max-width: 1570px) {
+    .mainpart {
+        width: 100%;
+    }
+    .startbox {
+        display: block;
+    }
+    .startbox img {
+        display: block;
+        margin: 30px auto;
+    }
+    footer .footcontent {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: 
+        "logo ul1 ul2"
+        "logo ul3 ul4";
+    }
+    #footul1 {
+        grid-area: ul1;
+    }
+    #footul2 {
+        grid-area: ul2;
+    }
+    #footul3 {
+        grid-area: ul3;
+    }
+    #footul4 {
+        grid-area: ul4;
+    }
+}
+@media (max-width: 1000px) {
+    .mainpart {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .startbox p {
+        margin: 30px 0;
+        border-right: none;
+        border-left: none;
+        border-radius: none;
+    }
+    .gamesbox {
+        border-right: none;
+        border-left: none;
+        border-radius: none;
+    }
+    .aboutusbox p {
+        border-right: none;
+        border-left: none;
+        border-radius: none;
+    }
+    .aboutusbox fieldset {
+        border-right: none;
+        border-left: none;
+        border-radius: none;
+    }
+}
+@media (max-width: 610px) {
+    header h1 {
+        font-size: 70px;
+    }
+    header nav ul li {
+        font-size: 20px;
+    }
+    footer .footcontent {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "logo"
+        "ul1"
+        "ul2"
+        "ul3"
+        "ul4"
+        ;
+    }
+    footer .footcontent .logo {
+        margin: 20px auto;
+    }
+    footer .footcontent ul {
+        margin: 20px auto 20px auto;
+    }
+    footer .footcontent li {
+        text-align: center;
+    }
 }

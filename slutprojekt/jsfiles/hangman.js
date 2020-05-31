@@ -11,7 +11,25 @@ const eButton = document.querySelector('button');
 const eLetters = document.querySelector('.letters');
 
 //Global varibles
-var selected, country = "", guessCountry;
+var country = "", guessCountry, wrongGuesses, correctAnswers = 0;
+
+//.replaceAt function (from the internet)
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+
+//Draw hill
+function hill() {
+    ctx.beginPath();
+    ctx.fillStyle = "#080";
+    ctx.strokeStyle = "#080";
+    ctx.lineWidth = "3";
+    ctx.arc(350, 1500, 950, Math.PI * 1.25, Math.PI * 1.75);
+    ctx.stroke();
+    ctx.fill();
+}
+
+hill()
 
 /* ********************** */
 /* Continent and countrys */
@@ -215,8 +233,12 @@ var world = eu.concat(as, oc, naca, sa, af);
 
 //Selected continent
 eButton.addEventListener('click', function() {
+    var selected;
     //console.log(eContinent.value);
     switch (eContinent.value) {
+        case "no-select":
+            eOutput.value = "Select a continent";
+            break;
         case "eu":
             selected = eu;
             break;
@@ -241,16 +263,23 @@ eButton.addEventListener('click', function() {
     }
     //console.log(selected);
 
+    //Reset the game
+    guessCountry = "", wrongGuesses = 0, correctAnswers = 0;
+    eOutput.style = "background: #fff; font-weight: normal;"
+    ctx.clearRect(0, 0, 700, 700);
+    hill();
+
     //Random country selection
     country = selected[Math.floor(Math.random() * selected.length)];
     //console.log(selected);
 
-    //Reset guessCountry
-    guessCountry = "";
-
     //Generate all "_ "
     for (var i = 0; i < country.length; i++) {
-        guessCountry += "_";
+        if (country[i] == " ") {
+            guessCountry += " ";
+        } else {
+            guessCountry += "_";
+        }
     }
     //console.log(country, guessCountry);
     eOutput.value = guessCountry;
@@ -261,7 +290,7 @@ eButton.addEventListener('click', function() {
 /* ********************** */
 //Know wich button pressed
 eLetters.addEventListener('click', function(event) {
-    var guess, incorrect = true, newGuessCountry = "";
+    var guess, correct = false;
 
     //All keys
     switch (event.target.textContent) {
@@ -352,23 +381,87 @@ eLetters.addEventListener('click', function(event) {
         var letter = country[i].toUpperCase();
 
         //Controll if guess is a letter in the country
-        if (guess == letter) {
-            newGuessCountry += country[i];
-        } else {
-            newGuessCountry += "_";
+        if (guess == letter && guessCountry[i] == "_") {
+            guessCountry = guessCountry.replaceAt(i, country[i]);
+            correct = true;
+            correctAnswers++;
         }
     }
-    console.log(newGuessCountry);
-    
 
-    for (var a = 0; a < country.length; a++) {
-        if (guessCountry[a] == "_") {
-            guessCountry[a] = newGuessCountry[a];
-        } else {
-            incorrect = false;
-        }
-    }
+    //Show the progress
     eOutput.value = guessCountry;
-    console.log(guessCountry);
-    
+
+    //Increment wrong guesses
+    if (correct == false) {
+        wrongGuesses++;
+        console.log(wrongGuesses);
+    }
+
+    //Draw when guessing wrong
+    switch (wrongGuesses) {
+        case 1:
+            ctx.beginPath()
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = "20";
+            ctx.moveTo(300, 550);
+            ctx.lineTo(300, 200);
+            ctx.stroke();
+            break;
+        case 2:
+            ctx.moveTo(290, 200);
+            ctx.lineTo(450, 200);
+            ctx.stroke();
+            break;
+        case 3:
+            ctx.lineWidth = "2";
+            ctx.moveTo(425, 200);
+            ctx.lineTo(425, 250);
+            ctx.stroke();
+            break;
+        case 4:
+            ctx.beginPath();
+            ctx.strokeStyle = "#FEDBB7";
+            ctx.fillStyle = "#FEDBB7";
+            ctx.lineWidth = "4";
+            ctx.moveTo(450, 275);
+            ctx.arc(425, 275, 25, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            break;
+        case 5:
+            ctx.moveTo(425, 300);
+            ctx.lineTo(425, 400);
+            ctx.stroke();
+            break;
+        case 6:
+            ctx.lineTo(410, 475);
+            ctx.stroke();
+            break;
+        case 7:
+            ctx.moveTo(425, 400);
+            ctx.lineTo(440, 475);
+            ctx.stroke();
+            break;
+        case 8:
+            ctx.moveTo(425, 330);
+            ctx.lineTo(410, 400);
+            ctx.stroke();
+            break;
+        case 9:
+            ctx.moveTo(425, 330);
+            ctx.lineTo(440, 400);
+            ctx.stroke();
+            ctx.closePath();
+
+            //Revile answer and notify that player lost
+            eOutput.style = "background: #f00; font-weight: bold;";
+            eOutput.value = country;
+            break;
+    }
+
+    //When you guess the country right before 9 wrong guesses
+    if (correctAnswers == country.length && wrongGuesses < 9) {
+        //console.log("hej");
+        eOutput.style = "background: #0f0; font-weight: bold;";
+    }
 });
