@@ -19,9 +19,10 @@
 
             function klocka() {
                 var tid = new Date();
-                var hrs = tid.getUTCHours() + 1;
+                var hrs = tid.getUTCHours() + 2;
                 var min = tid.getMinutes();
                 var sec = tid.getSeconds();
+                //console.log(hrs);
                 var tidSec, tidMin, tidHrs;
                 if (sec < 10) {
                     tidSec = "0" + sec;
@@ -35,8 +36,10 @@
                 }
                 if (hrs < 10) {
                     tidHrs = "0" + hrs;
+                } else {
+                    tidHrs = hrs;
                 }
-                console.log(hrs + tidMin + tidSec);
+                //console.log(hrs + tidMin + tidSec);
                 elementH1.innerHTML = tidHrs + "<span class=\"kolon\">:</span>" + tidMin + "<span class=\"kolon\">:</span>" + tidSec;
             }
         </script>
