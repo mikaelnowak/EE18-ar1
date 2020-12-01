@@ -53,7 +53,7 @@ main img {
     gap: 20px;
     grid-template-areas: 
     "sidhuvud sidhuvud"
-    "meny meny"
+    "meny sidebar"
     "innehall sidebar"
     "sidfot sidfot";
 }
